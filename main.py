@@ -86,7 +86,7 @@ if answer == "right":
                 if answer == "y":
                     answer= input("You talk to the stranger and they say they are a wizard, do you want to be a wizard? (y/n)")
                     if answer == "y":
-                        print("You are a wizard and you win the game.")
+                        print("You are a wizard and you WIN the game!")
                         print("Thanks for playing!")
                         print("CONRATULATIONS ON WINNING THE GAME!")
                         exit()
