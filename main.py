@@ -116,4 +116,4 @@ if answer == "right":
                 print('Not a valid answer. You die.')
 if answer =="n":
     print("See you later!")
-exit()
+    exit()
