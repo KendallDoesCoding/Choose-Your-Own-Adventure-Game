@@ -23,11 +23,27 @@ if answer == "left":
 
     #user input walk then
     elif answer =="walk":
-        print("You walked for many miles, ran out of water and you lost the game.")
-        print("Game over")
-        print("Thanks for playing!")
-        exit()
-
+        answer = input("You walked for many miles, ran out of water and remembered that there was a shop far away (10 miles/16kms) which supplies water. Do you want to go there (yes/no)?")
+        if answer == "yes":
+            print("You walked to the shop and bought some water.")
+        answer = input("You are thirsty, do you want to drink some water (yes/no)?")
+        if answer == "yes":
+                print("You went 10 miles walking and bought 10 liters of drinking water")
+        answer = input("You drank 5 liters of water and now you feel refreshed. Do you want to walk further or go back home? (further/home)")
+        if answer == "further":
+                print("You walked 100 more miles and you WIN the game!")
+                print("Thanks for playing!")
+                print("CONRATULATIONS ON WINNING THE GAME!")
+        if answer == "home":
+                print("You fell down, went to hospital, and died.")
+                print("Game over")
+                print("Thanks for playing!")
+                exit()
+        elif answer=="no":
+            print("You fell sick, went to hospital, and died.")
+            print("Game over")
+            print("Thanks for playing!")
+            exit()
     # user doesn't input left or right then
     else:
         print('Not a valid answer. You die.')
