@@ -10,38 +10,38 @@ if answer == "y":
     # start the game
     # q1
     answer=input("You are on a dirt road. Which way to you want to go left or right? " ).lower()
-    # user input left then
+    # if user inputs left then
 if answer == "left":
     answer = input("You come to a river, you can walk around it or swim accross. Type walk to walk around & swim to swim across. ").lower()
 
-    #user input swim then
+    # if user inputs swim then
     if answer == "swim":
         print("You swam accross the river and were eaten by an aligator.")
         print("Game over")
         print("Thanks for playing!")
         exit()
 
-    #user input walk then
+    #if user inputs walk then
     elif answer =="walk":
     # q2
         answer = input("You walked for many miles, ran out of water and remembered that there was a shop far away (10 miles/16kms) which supplies water. Do you want to go there (yes/no)?")
-    #user input yes then
+    #if user inputs yes then
         if answer == "yes":
             print("You walked to the shop and bought some water.")
     #q3
         answer = input("You are thirsty, do you want to drink some water (yes/no)?")
-    #user input yes then
+    #if user inputs yes then
         if answer == "yes":
                 print("You went 10 miles walking and bought 10 liters of drinking water")
     #q4
         answer = input("You drank 5 liters of water and now you feel refreshed. Do you want to walk further or go back home? (further/home)")
-    #user input further then
+    #if user inputs further then
         if answer == "further":
                 print("You walked 100 more miles and you WIN the game!")
                 print("Thanks for playing!")
                 print("CONRATULATIONS ON WINNING THE GAME!")
                 exit()
-    #user input home then
+    #if user inputs home then
         if answer == "home":
                 print("You fell down, went to hospital, and died.")
                 print("Game over")
@@ -53,17 +53,17 @@ if answer == "left":
             print("Game over")
             print("Thanks for playing!")
             exit()
-    # user doesn't input left or right then
+    # if user doesn't input left or right then
     else:
         print('Not a valid answer. You die.')
     print("Game over")
     print("Thanks for playing!")
     exit()
 
-# user input right then
+# if user inputs right then
 if answer == "right":
         answer = input("You come to a bridge, it looks wobbly, do you want it or do you want to head back? (cross/back)")
-        # user input back then
+        # if user inputs back then
         if answer == "back":
                 answer = input ("You go back to the main road. Now you can decide to drive forward or turn left. (forward/left)")
         if answer =="forward":
@@ -71,13 +71,14 @@ if answer == "right":
             print("Game over")
             print("Thanks for playing!")
             exit()
-
+        # if users inputs left then
         if answer == "left":
             answer = input("You turned left and you come to a lake, do you want to swim or go back? (swim/back)")
             if answer == "swim":
                 answer = input ("You swam accross the lake and were eaten by a shark.")
                 print("Game over")
                 exit()
+        
             elif answer == "back":
                 answer = input("You go back to the main road. Now you can decide to drive forward or turn left. (forward/left")
                 if answer == "forward":
