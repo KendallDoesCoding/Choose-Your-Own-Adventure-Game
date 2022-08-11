@@ -90,7 +90,7 @@ if answer == "right":
                     print("Game over")
                     print("Thanks for playing!")
                     exit()
-        # user input cross then
+        # if user inputs cross then
         elif answer =="cross":
                 answer = input("You cross the bridge and meet a stranger, do you talk to them? (y/n)")
                 if answer == "y":
