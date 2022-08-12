@@ -2,9 +2,18 @@
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game])
 
-I have made a **Choose Your Own Adventure Game**, as of now there are **2** winning solutions, but I am gonna add many more questions and more winning solutions over time.
+A simple  **Choose Your Own Adventure Game** created using python.
 
-If you would like to add a **Question, fix grammar/typos, etc**, please make a **PR** (will add **CONTRIBUTING GUIDELINES soon**).
+Currently there are **2** winning solutions, but I plan to add many more questions and winning solutions over time.
+
+# Requirements
+- Python 3.x
+
+# Run in GitPod
+
+You can also run **Choose Your Own Adventure Game**  in Gitpod, a free online dev environment for GitHub.
+
+Please make a **PR** if you want to add a **question, fix grammar/typos, etc.** (will add **CONTRIBUTING GUIDELINES soon**).
 
 Thanks,
 
