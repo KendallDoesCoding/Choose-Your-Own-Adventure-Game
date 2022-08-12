@@ -11,7 +11,7 @@ A simple Choose Your Own Adventure game created using Python.
 
 # Run in GitPod
 
-You can also run Hnagman in Gitpod, a free online dev environment for GitHub:
+You can also run Hnagman in Gitpod, a free online dev environment for GitHub.
 
 Currently, there are **2** winning solutions, but I am going to add many more questions and more winning solutions over time.
 
