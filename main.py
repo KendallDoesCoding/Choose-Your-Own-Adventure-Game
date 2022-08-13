@@ -99,8 +99,7 @@ def chapter_river():
         if answer == "yes":
             print("You walked to the shop and bought some water.")
         # q3
-        answer = input(
-            "You are thirsty, do you want to drink some water (yes/no)?")
+        answer = input("You are thirsty, do you want to drink some water (yes/no)?")
         # if user inputs yes then
         if answer == "yes":
             print("You went 10 miles walking and bought 10 liters of drinking water")
