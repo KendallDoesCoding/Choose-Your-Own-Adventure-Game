@@ -1,6 +1,14 @@
-# welcome to the game
-name = input("Type your name: ")
-print("Welcome", name, "to this adventure!")
+def game_over(message: str = None, *, end_game=True, win=False):
+    "Prints Game over message"
+    if message:
+        print(message)
+    if win:
+        print("CONRATULATIONS ON WINNING THE GAME!")
+    else:
+        print("Game over")
+    print("Thanks for playing!")
+    if end_game:
+        exit()
 
 # do you want to play?
 answer = input("Do you want to play? (y/n) ")
