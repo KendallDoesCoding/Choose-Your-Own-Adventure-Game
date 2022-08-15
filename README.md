@@ -14,8 +14,17 @@ Currently there are **2** winning solutions, but I plan to add many more questio
 
 You can also run **Choose Your Own Adventure Game** in Gitpod, a free online dev environment for GitHub.
 
-Please make a **PR** if you want to add a **question, fix grammar/typos, etc.** (will add **CONTRIBUTING GUIDELINES soon**).
+Please make a **PR** if you want to add a **question, fix grammar/typos, etc.
 
 Thanks,
 
 KendallDoesCoding
+
+<!-- CONTRIBUTING -->
+
+## 💁‍♂️Contributing to the project
+Its good to see you contributing to the project.
+
+Check out our [CONTRIBUTING GUIDELINES](./CONTRIBUTING.md)
+page for more information.
+
