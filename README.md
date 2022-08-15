@@ -25,6 +25,6 @@ KendallDoesCoding
 ## 💁‍♂️Contributing to the project
 Its good to see you contributing to the project.
 
-Check out the [contributing guide](./CONTRIBUTING.md)
+Check out our [CONTRIBUTING GUIDELINES](./CONTRIBUTING.md)
 page for more information.
 
