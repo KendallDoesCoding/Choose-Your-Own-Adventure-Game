@@ -1,30 +1,25 @@
 # Choose-Your-Own-Adventure-Game
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game])
-
 A simple  **Choose Your Own Adventure Game** created using python.
 
-Currently there are **2** winning solutions, but I plan to add many more questions and winning solutions over time.
-
+Currently, there are **2** possible winning solutions. In the future versions, there will be more questions and thus more winning solutions.
 # Requirements
 
-- Python 3.x
+- Python 3.0
 
 # Run in GitPod
 
-You can also run **Choose Your Own Adventure Game** in Gitpod, a free online dev environment for GitHub.
+You can run **Choose Your Own Adventure Game** in Gitpod, a free online dev environment for GitHub.
 
-Please make a **PR** if you want to add a **question, fix grammar/typos, etc.
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game])
 
-Thanks,
-
-KendallDoesCoding
 
 <!-- CONTRIBUTING -->
 
 ## 💁‍♂️Contributing to the project
-Its good to see you contributing to the project.
+It is good to see you contributing to the project.
 
-Check out our [CONTRIBUTING GUIDELINES](./CONTRIBUTING.md)
-page for more information.
+- It is a request that you create a **Pull Request** (PR) in order to make changes in any of the files, fix grammar or add sommething to the repository. 
+- Please open a **New Issue** first in order to make more/major changes. 
 
+Before contributing, it is highly recommended to go through the [CONTRIBUTING GUIDELINES](./CONTRIBUTING.md).
