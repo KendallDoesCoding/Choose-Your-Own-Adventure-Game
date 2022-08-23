@@ -1,6 +1,6 @@
-# Choose-Your-Own-Adventure-Game
+# Choose Your Own Adventure Game
 
-A simple  **Choose Your Own Adventure Game** created using python.
+A simple **Choose Your Own Adventure Game** created using python.
 
 Currently, there are **2** possible winning solutions. In the future versions, there will be more questions and thus more winning solutions.
 # Requirements
