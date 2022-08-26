@@ -25,4 +25,7 @@ It is good to see you contributing to the project.
 Before contributing, it is highly recommended to go through the [CONTRIBUTING GUIDELINES](./CONTRIBUTING.md).
 
 ## Example
-![name](/media/example.mov)
+
+
+https://user-images.githubusercontent.com/99717469/186931286-78aa19cb-e13e-4364-b5ee-12efd6fcaae8.mov
+
