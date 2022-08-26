@@ -25,4 +25,4 @@ It is good to see you contributing to the project.
 Before contributing, it is highly recommended to go through the [CONTRIBUTING GUIDELINES](./CONTRIBUTING.md).
 
 ## Example
-![name](/media/example.mkv)
+![name](/media/example.mov)
