@@ -23,3 +23,6 @@ It is good to see you contributing to the project.
 - Please open a **New Issue** first in order to make more/major changes. 
 
 Before contributing, it is highly recommended to go through the [CONTRIBUTING GUIDELINES](./CONTRIBUTING.md).
+
+## Example
+![name](/media/example.mkv)
