@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.3.0...v0.4.0) (2023-03-04)
+
+
+### Features
+
+* added music ([2df4fed](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/2df4fedd7828f161cd3f850f00ad5adf4e10f979))
+
+
+
 # [0.3.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.2.1...v0.3.0) (2023-03-04)
 
 
