@@ -3,7 +3,7 @@ def game_over(message: str = None, *, end_game=True, win=False):
     if message:
         print(message)
     if win:
-        print("CONRATULATIONS ON WINNING THE GAME!")
+        print("CONRATULATIONS on winning the game!")
     else:
         print("Game over")
     print("Thanks for playing!")
@@ -25,6 +25,8 @@ def chapter_lake():
             game_over("You drive forward and crash into a tree and die.")
         elif answer == "left":
             game_over()
+    else:
+        print("Not a valid answer. You die.")
 
 
 def chapter_stranger():
@@ -110,7 +112,8 @@ def chapter_river():
             game_over("You fell sick, went to hospital, and died.")
     # if user doesn't input left or right then
     else:
-        game_over("Not a valid answer. You die.")
+        print("Not a valid answer. You die.")
+        game_over()
 
 
 def main():
