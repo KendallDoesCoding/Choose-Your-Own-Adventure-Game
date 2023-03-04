@@ -126,6 +126,10 @@ def game_over(message: str = None, *, end_game=True, win=False):
     else:
         print(Fore.BLUE + "Game over")
         print(Fore.LIGHTYELLOW_EX + "Thanks for playing!")
-    if end_game:
+    answer = input(Fore.GREEN + "Do you want to play again? (y/n)")
+    if answer == "y":
+        start()
+    elif answer == "n":
+        print(Fore.BLUE + "Thanks for playing!")
         exit()
 
