@@ -23,21 +23,12 @@ def main():
         # starting the game
         print("Let's play!")
         # start the game
-        # q1
-        answer = input(
-            "You are on a dirt road. Which way to you want to go left or right? "
-        ).lower()
-        # if user inputs left then
-    if answer == "left":
-        chapter_river()
-
-    # if user inputs right then
-    if answer == "right":
-        chapter_bridge()
+        start()
 
     if answer == "n" or answer == "no":
         print("See you later!")
         exit()
+
 
 
 if __name__ == "__main__":
