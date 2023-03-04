@@ -123,7 +123,7 @@ def main():
 
     # do you want to play?
     answer = input("Do you want to play? (y/n) ")
-    if answer == "y":
+    if answer == "y" or answer == "yes":
         # starting the game
         print("Let's play!")
         # start the game
@@ -139,7 +139,7 @@ def main():
     if answer == "right":
         chapter_bridge()
 
-    if answer == "n":
+    if answer == "n" or answer == "no":
         print("See you later!")
         exit()
 
