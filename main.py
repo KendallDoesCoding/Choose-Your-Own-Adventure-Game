@@ -1,16 +1,7 @@
 from chapters import *
+from music import * 
 
-def game_over(message: str = None, *, end_game=True, win=False):
-    "Prints Game over message"
-    if message:
-        print(message)
-    if win:
-        print("CONRATULATIONS on winning the game!")
-    else:
-        print("Game over")
-    print("Thanks for playing!")
-    if end_game:
-        exit()
+music()
 
 def main():
     # welcome to the game
@@ -33,3 +24,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
