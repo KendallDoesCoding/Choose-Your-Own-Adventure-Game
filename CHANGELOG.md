@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.2.1...v0.3.0) (2023-03-04)
+
+
+### Features
+
+* Small updates and seprate file for Chapters. ([31eae65](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/31eae654862553d0d05ff0fb9baa5644bd59fafd))
+
+
+
 ## [0.2.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.2.0...v0.2.1) (2022-10-11)
 
 
