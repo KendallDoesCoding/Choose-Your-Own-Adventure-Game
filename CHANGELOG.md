@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.2.0...v0.2.1) (2022-10-11)
+
+
+### Reverts
+
+* Revert "Attempt to convert to exe (#16)" (#17) ([5d669b9](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/5d669b9d53cb12fe3412a9757253a27e15cbb5ec)), closes [#16](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/16) [#17](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/17)
+
+
+
 # [0.2.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.1.0...v0.2.0) (2022-08-11)
 
 
