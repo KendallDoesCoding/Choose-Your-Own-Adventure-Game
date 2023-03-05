@@ -1,3 +1,12 @@
+# [0.6.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.5.0...v0.6.0) (2023-03-05)
+
+
+### Features
+
+* add emojis to print statements via unicode. ([b71701f](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/b71701f8a8398d054e86bb56037a34e8147d2a4e))
+
+
+
 # [0.5.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.4.0...v0.5.0) (2023-03-04)
 
 
@@ -31,15 +40,6 @@
 ### Reverts
 
 * Revert "Attempt to convert to exe (#16)" (#17) ([5d669b9](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/5d669b9d53cb12fe3412a9757253a27e15cbb5ec)), closes [#16](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/16) [#17](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/17)
-
-
-
-# [0.2.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.1.0...v0.2.0) (2022-08-11)
-
-
-### Features
-
-* add a winning solution/improve game ([b62ba8f](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/b62ba8f5b8b7c83b99e5a7136234d4037e7a7a60))
 
 
 
