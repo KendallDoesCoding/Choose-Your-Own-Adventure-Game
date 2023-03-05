@@ -19,7 +19,7 @@ def chapter_river():
         "Type walk to walk around & swim to swim across. ").lower()
     # if user inputs swim then
     if answer == "swim":
-        game_over(Fore.RED + "You swam across the river and were eaten by an aligator.")
+        game_over(Fore.RED + "You swam across the river and were eaten by an aligator. \U0001F480")
     # if user inputs walk then
     elif answer == "walk":
         # q2
@@ -29,7 +29,7 @@ def chapter_river():
             "Do you want to go there (yes/no)?")
             # if user inputs no then
         if answer == "no":
-            game_over(Fore.RED + "You were very de-hydrated and died of thirst when you were walking.")
+            game_over(Fore.RED + "You were very de-hydrated and died of thirst when you were walking. \U0001F480")
         
         # if user inputs yes then
         elif answer == "yes":
@@ -43,9 +43,9 @@ def chapter_river():
             )
         # if user inputs no then
         elif answer == "no":
-            game_over(Fore.RED + "You died of thirst.")
+            game_over(Fore.RED + "You died of thirst.\U0001F480 ")
         else: 
-            print(Fore.RED + "Not a valid answer. You die.")
+            print(Fore.RED + "Not a valid answer. You die. \U0001F480")
             game_over()
         # q4
         answer = input(Fore.GREEN + 
@@ -53,13 +53,13 @@ def chapter_river():
         )
         # if user inputs further then
         if answer == "further":
-            game_over(Fore.BLUE + "You walked 100 more miles and you WIN the game!",
+            game_over(Fore.BLUE + "You walked 100 more miles and you WIN the game! \U0001f3c6",
                       win=True)
         # if user inputs home then
         if answer == "home":
-            game_over(Fore.RED + "You fell down, went to hospital, and died.")
+            game_over(Fore.RED + "You fell down, went to hospital, and died. \U0001F480")
         else:
-            print(Fore.RED + "Not a valid answer. You die.")
+            print(Fore.RED + "Not a valid answer. You die. \U0001F480")
             game_over()
         
 def chapter_bridge():
@@ -71,7 +71,7 @@ def chapter_bridge():
             "You go back to the main road."
             "Now you can decide to drive forward or turn left. (forward/left)")
     if answer == "forward":
-        game_over(Fore.RED + "You drive forward and crash into a tree and die.")
+        game_over(Fore.RED + "You drive forward and crash into a tree and die.\U0001F480 ")
     # if users inputs left then
     if answer == "left":
         chapter_lake()
@@ -79,23 +79,23 @@ def chapter_bridge():
     elif answer == "cross":
         chapter_stranger()
     else:
-        print(Fore.RED + "Not a valid answer. You die.")
+        print(Fore.RED + "Not a valid answer. You die. \U0001F480 ")
         game_over()
 
 def chapter_lake():
     answer = input(Fore.GREEN + "You turned left and you come to a lake,"
                    "do you want to swim or go back? (swim/back)")
     if answer == "swim":
-        game_over(Fore.RED + "You swam accross the lake and were eaten by a shark.")
+        game_over(Fore.RED + "You swam accross the lake and were eaten by a shark. \U0001F480 ")
 
     elif answer == "back":
         answer = input(Fore.GREEN +
             "You go back to the main road."
             "Now you can decide to drive forward or turn left. (forward/left")
         if answer == "forward":
-            game_over(Fore.RED + "You drive forward and crash into a tree and die.")
+            game_over(Fore.RED + "You drive forward and crash into a tree and die. \U0001F480")
         elif answer == "left":
-            game_over(Fore.RED + "You died.")
+            game_over(Fore.RED + "You died. \U0001F480")
     else:
         print(Fore.RED + "Not a valid answer. You die.")
 
@@ -108,13 +108,9 @@ def chapter_stranger():
             "You talk a wizard and they ask you,"
             "do you want to be a wizard? (y/n)")
         if answer == "y":
-            game_over(Fore.RED + "You are a wizard and you WIN the game!", win=True)
-        elif answer == "n":
-            game_over(Fore.RED + "The wizard was not pleased by you and"
-                      "gave you posion. You died.")
-
+            game_over(Fore.RED + "You are a wizard and you WIN the game! \U0001f3c6", win=True)
     elif answer == "n":
-        answer = input(Fore.RED + "The stranger murdered you.")
+        answer = input(Fore.RED + "The stranger was not pleased by you and murdered you. \U0001F52B")
         game_over()
 
 def game_over(message: str = None, *, end_game=True, win=False):

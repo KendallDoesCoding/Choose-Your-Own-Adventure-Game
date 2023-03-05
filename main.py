@@ -15,12 +15,12 @@ def main():
         print("See you later!")
         exit()
     # do you want music?
-    answer = input(Fore.YELLOW + "Do you want music? (y/n) ")
+    answer = input(Fore.YELLOW + "Do you want music? \U0001F3B5 (y/n) ")
     if answer == "y" or answer == "yes":
         music()
         start()
     if answer == "n" or answer == "no":
-        print("Okay :)")
+        print("Okay \U0001F600")
         start()
 
 
