@@ -4,13 +4,13 @@ from music import *
 def main():
     # welcome to the game
     name = input(Fore.YELLOW + "Type your name: ")
-    print("Welcome", name, "to this adventure!")
+    print(Fore.LIGHTGREEN_EX + "Welcome", name, "to this adventure!" )
 
     # do you want to play?
     answer = input(Fore.YELLOW + "Do you want to play? (y/n) ")
     if answer == "y" or answer == "yes":
         # starting the game
-        print("Let's play!")
+        print(Fore.LIGHTGREEN_EX + "Let's play!")
     if answer == "n" or answer == "no":
         print("See you later!")
         exit()
@@ -20,7 +20,7 @@ def main():
         music()
         start()
     if answer == "n" or answer == "no":
-        print("Okay \U0001F600")
+        print(Fore.LIGHTGREEN_EX + "Okay \U0001F600")
         start()
 
 
