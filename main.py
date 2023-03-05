@@ -10,9 +10,9 @@ def main():
     answer = input(Fore.YELLOW + "Do you want to play? (y/n) ")
     if answer == "y" or answer == "yes":
         # starting the game
-        print(Fore.LIGHTGREEN_EX + "Let's play!")
+        print(Fore.LIGHTGREEN_EX + "Let's play! \U0001F3AE")
     if answer == "n" or answer == "no":
-        print("See you later!")
+        print("See you later! \U0001F600")
         exit()
     # do you want music?
     answer = input(Fore.YELLOW + "Do you want music? \U0001F3B5 (y/n) ")
