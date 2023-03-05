@@ -1,41 +1,31 @@
-# This is a basic workflow to help you get started with Actions
+name: "Py to Exe"
 
-name: CI
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
+    branches: ["main"]
 
 jobs:
   build:
-    runs-on: windows-latest
-
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
-      # Check-out repository
       - uses: actions/checkout@v3
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
-          python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-          architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-
-      # Build python script into a stand-alone exe
-      - uses: KendallDoesCoding/Choose-Your-Own-Adventure-Game@v0.6.0
+          python-version: "3.10"
+          architecture: "x64"
+      - uses: Nuitka/Nuitka-Action@main
         with:
           script-name: main.py
-      
-      # Uploads artifact
-      - name: Upload Artifact
+      - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: exe
-          path: build/main.exe
+          name: ${{ runner.os }} Build
+          path: |
+            build/*.exe
+            build/*.bin
+            build/*.app/**/*
