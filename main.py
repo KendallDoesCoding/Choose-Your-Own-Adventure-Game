@@ -1,6 +1,8 @@
 from chapters import *
 from music import * 
 
+print(Fore.MAGENTA + "Choose Your Own Aventure Game!" )
+
 def main():
     # welcome to the game
     name = input(Fore.YELLOW + "Type your name: ")
