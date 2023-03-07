@@ -57,7 +57,7 @@ def chapter_river():
                       win=True)
         # if user inputs home then
         if answer == "home":
-            game_over(Fore.RED + "You fell down, went to hospital, and died. \U0001F480")
+            game_over(Fore.RED + "A car crashed you and you were rushed to hospital. Although, it was too late by the time you reached the hospital, and you had already died. \U0001F480")
         else:
             print(Fore.RED + "Not a valid answer. You die. \U0001F480")
             game_over()
