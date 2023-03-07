@@ -1,3 +1,12 @@
+## [0.6.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.6.0...v0.6.1) (2023-03-07)
+
+
+### Bug Fixes
+
+* Move music to the music directory. ([85c424e](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/85c424e178030f7bbab8908e145d1e5648dd2180))
+
+
+
 # [0.6.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.5.0...v0.6.0) (2023-03-05)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * Small updates and seprate file for Chapters. ([31eae65](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/31eae654862553d0d05ff0fb9baa5644bd59fafd))
-
-
-
-## [0.2.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.2.0...v0.2.1) (2022-10-11)
-
-
-### Reverts
-
-* Revert "Attempt to convert to exe (#16)" (#17) ([5d669b9](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/5d669b9d53cb12fe3412a9757253a27e15cbb5ec)), closes [#16](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/16) [#17](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/17)
 
 
 
