@@ -1,3 +1,17 @@
+# [0.7.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.6.1...v0.7.0) (2023-03-08)
+
+
+### Bug Fixes
+
+* leave one space between question and user input (it was too cluttered). ([ea358ab](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/ea358ab27b044857d99ac2d0c2d6d6a482aa838c))
+
+
+### Features
+
+* add colour for input text (from user) ([6796e0c](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/6796e0caecd69aaf34363edc15ae4f319f130ad7))
+
+
+
 ## [0.6.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.6.0...v0.6.1) (2023-03-07)
 
 
@@ -31,15 +45,6 @@
 ### Features
 
 * added music ([2df4fed](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/2df4fedd7828f161cd3f850f00ad5adf4e10f979))
-
-
-
-# [0.3.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.2.1...v0.3.0) (2023-03-04)
-
-
-### Features
-
-* Small updates and seprate file for Chapters. ([31eae65](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/31eae654862553d0d05ff0fb9baa5644bd59fafd))
 
 
 
