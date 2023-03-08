@@ -1,6 +1,7 @@
 from chapters import *
 from music import * 
 
+# heading text!
 txt = 'Choose Your Own Adventure Game!'
 txt2 = "\U000000A9 2023, KendallDoesCoding, All Rights Reserved"
 new_str = Fore.BLUE + txt.center(150)
