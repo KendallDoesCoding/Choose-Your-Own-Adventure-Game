@@ -1,7 +1,13 @@
 from chapters import *
 from music import * 
 
-print(Fore.MAGENTA + "Choose Your Own Aventure Game!" )
+txt = 'Choose Your Own Adventure Game!'
+txt2 = "\U000000A9 2023, KendallDoesCoding, All Rights Reserved"
+new_str = Fore.BLUE + txt.center(150)
+new_str2 = Fore.BLUE + txt2.center(150)
+print(new_str)
+print(new_str2)
+
 
 def main():
     # welcome to the game
