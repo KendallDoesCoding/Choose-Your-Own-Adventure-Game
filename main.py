@@ -1,3 +1,15 @@
+import sys
+import subprocess
+import pkg_resources
+
+required = {'playsound==1.2.2', 'colorama=0.4.6'}
+installed = {pkg.key for pkg in pkg_resources.working_set}
+missing = required - installed
+
+if missing:
+    python = sys.executable
+    subprocess.check_call([python, '-m', 'pip', 'install', *missing], stdout=subprocess.DEVNULL)
+    
 from chapters import *
 from music import * 
 
