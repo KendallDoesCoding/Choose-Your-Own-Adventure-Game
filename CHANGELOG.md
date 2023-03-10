@@ -1,3 +1,12 @@
+# [0.9.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.8.2...v0.9.0) (2023-03-10)
+
+
+### Features
+
+* select random chapter to behgin with ([6f605cd](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/6f605cda9182f9c40fa9ed2621388cc021c3a720)), closes [#19](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/19)
+
+
+
 ## [0.8.2](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.8.1...v0.8.2) (2023-03-10)
 
 
@@ -31,20 +40,6 @@
 
 
 ## [0.7.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.7.0...v0.7.1) (2023-03-10)
-
-
-
-# [0.7.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.6.1...v0.7.0) (2023-03-08)
-
-
-### Bug Fixes
-
-* leave one space between question and user input (it was too cluttered). ([ea358ab](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/ea358ab27b044857d99ac2d0c2d6d6a482aa838c))
-
-
-### Features
-
-* add colour for input text (from user) ([6796e0c](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/6796e0caecd69aaf34363edc15ae4f319f130ad7))
 
 
 
