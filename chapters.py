@@ -1,8 +1,9 @@
+# import the colorama module
 from colorama import Fore
 import colorama
 colorama.init(convert=True)
 
-
+# start the game
 def start():
     answer = input(Fore.GREEN + "You are on a dirt road. Which way to you want to go left or right? " + Fore.LIGHTMAGENTA_EX).lower()
 # if user inputs left then
