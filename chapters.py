@@ -1,7 +1,8 @@
 # import the colorama module
-from colorama import Fore
-import colorama
 import random
+
+import colorama
+from colorama import Fore
 
 colorama.init(convert=True)
 
