@@ -1,8 +1,9 @@
+# import the colorama module
 from colorama import Fore
 import colorama
 colorama.init(convert=True)
 
-
+# start the game
 def start():
     answer = input(Fore.GREEN + "You are on a dirt road. Which way to you want to go left or right? " + Fore.LIGHTMAGENTA_EX).lower()
 # if user inputs left then
@@ -111,6 +112,8 @@ def chapter_stranger():
             "do you want to be a wizard? (y/n) " + Fore.LIGHTMAGENTA_EX).lower()
         if answer == "y":
             game_over(Fore.RED + "You are a wizard and you WIN the game! \U0001f3c6", win=True)
+        elif answer == "n":
+            game_over(Fore.RED + "The stranger was not pleased by you and murdered you. \U0001F480")
 
 
 
