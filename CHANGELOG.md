@@ -1,3 +1,16 @@
+## [0.7.2](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.7.1...v0.7.2) (2023-03-10)
+
+
+### Bug Fixes
+
+* game ended without printing reason why. ([4a4b001](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/4a4b001e53abaaef509a9020304dde198ddd3931)), closes [#22](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/22)
+
+
+
+## [0.7.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.7.0...v0.7.1) (2023-03-10)
+
+
+
 # [0.7.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.6.1...v0.7.0) (2023-03-08)
 
 
@@ -27,24 +40,6 @@
 ### Features
 
 * add emojis to print statements via unicode. ([b71701f](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/b71701f8a8398d054e86bb56037a34e8147d2a4e))
-
-
-
-# [0.5.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.4.0...v0.5.0) (2023-03-04)
-
-
-### Features
-
-* add colours to game in terminal. ([c48f237](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/c48f237077247a3322f90d3e02e7e62c8ae58e77))
-
-
-
-# [0.4.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.3.0...v0.4.0) (2023-03-04)
-
-
-### Features
-
-* added music ([2df4fed](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/2df4fedd7828f161cd3f850f00ad5adf4e10f979))
 
 
 
