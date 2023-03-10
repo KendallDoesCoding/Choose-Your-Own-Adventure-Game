@@ -112,6 +112,8 @@ def chapter_stranger():
             "do you want to be a wizard? (y/n) " + Fore.LIGHTMAGENTA_EX).lower()
         if answer == "y":
             game_over(Fore.RED + "You are a wizard and you WIN the game! \U0001f3c6", win=True)
+        else:
+            game_over(Fore.RED + "Stranger was not happy and murdered you. \U0001F480")
 
 
 

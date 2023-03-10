@@ -4,7 +4,7 @@ import subprocess
 import pkg_resources
 
 # install missing modules
-required = {'playsound==1.2.2', 'colorama=0.4.6'}
+required = {'playsound==1.2.2', 'colorama==0.4.6'}
 installed = {pkg.key for pkg in pkg_resources.working_set}
 missing = required - installed
 
@@ -14,7 +14,7 @@ if missing:
 
 # import dependencies
 from chapters import *
-from music import * 
+from music import *
 
 # heading text!
 heading = 'Choose Your Own Adventure Game!'
@@ -24,10 +24,11 @@ new_str2 = Fore.BLUE + copyright.center(150)
 print(new_str)
 print(new_str2)
 
+
 def main():
     # welcome to the game
     name = input(Fore.YELLOW + "Type your name: " + Fore.LIGHTBLUE_EX)
-    print(Fore.LIGHTGREEN_EX + "Welcome", name, "to this adventure!" )
+    print(Fore.LIGHTGREEN_EX + "Welcome", name, "to this adventure!")
 
     # do you want to play?
     answer = input(Fore.YELLOW + "Do you want to play? (y/n) " + Fore.LIGHTBLUE_EX)
@@ -47,8 +48,5 @@ def main():
         start()
 
 
-
 if __name__ == "__main__":
     main()
-
-
