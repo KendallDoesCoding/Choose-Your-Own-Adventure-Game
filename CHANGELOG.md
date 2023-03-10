@@ -1,3 +1,12 @@
+## [0.8.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.8.0...v0.8.1) (2023-03-10)
+
+
+### Bug Fixes
+
+* missing one = (program cannot run) ([bac5fbd](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/bac5fbdf3125876a257e735533a43ccd51a148c4))
+
+
+
 # [0.8.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.7.2...v0.8.0) (2023-03-10)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * add colour for input text (from user) ([6796e0c](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/6796e0caecd69aaf34363edc15ae4f319f130ad7))
-
-
-
-## [0.6.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.6.0...v0.6.1) (2023-03-07)
-
-
-### Bug Fixes
-
-* Move music to the music directory. ([85c424e](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/85c424e178030f7bbab8908e145d1e5648dd2180))
 
 
 
