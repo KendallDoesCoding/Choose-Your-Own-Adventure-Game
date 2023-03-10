@@ -1,4 +1,4 @@
-from colorama import Fore, Back, Style
+from colorama import Fore
 import colorama
 colorama.init(convert=True)
 
@@ -15,7 +15,7 @@ def start():
 
 def chapter_river():
     answer = input(Fore.GREEN + 
-        "You come to a river, you can walk around it or swim accross."
+        "You come to a river, you can walk around it or swim across."
         "Type walk to walk around & swim to swim across. " + Fore.LIGHTMAGENTA_EX).lower()
     # if user inputs swim then
     if answer == "swim":
@@ -86,12 +86,12 @@ def chapter_lake():
     answer = input(Fore.GREEN + "You turned left and you come to a lake,"
                    "do you want to swim or go back? (swim/back) " + Fore.LIGHTMAGENTA_EX).lower()
     if answer == "swim":
-        game_over(Fore.RED + "You swam accross the lake and were eaten by a shark. \U0001F480 ")
+        game_over(Fore.RED + "You swam across the lake and were eaten by a shark. \U0001F480 ")
 
     elif answer == "back":
         answer = input(Fore.GREEN +
             "You go back to the main road."
-            "Now you can decide to drive forward or turn left. (forward/left " + Fore.LIGHTMAGENTA_EX).lower()
+            "Now you can decide to drive forward or turn left. (forward/left) " + Fore.LIGHTMAGENTA_EX).lower()
         if answer == "forward":
             game_over(Fore.RED + "You drive forward and crash into a tree and die. \U0001F480")
         elif answer == "left":
@@ -118,7 +118,7 @@ def game_over(message: str = None, *, end_game=True, win=False):
     if message:
         print(message)
     if win:
-        print("CONRATULATIONS on winning the game!")
+        print("CONGRATULATIONS on winning the game!")
     else:
         print(Fore.BLUE + "Game over")
         print(Fore.LIGHTYELLOW_EX + "Thanks for playing!")
