@@ -1,18 +1,26 @@
 # import the colorama module
 from colorama import Fore
 import colorama
+import random
 colorama.init(convert=True)
+
+def choices():
+    choice = random.randint(0, 1)
+    if choice == 0:
+        chapter_river()
+    else:
+        chapter_bridge()
 
 # start the game
 def start():
     answer = input(Fore.GREEN + "You are on a dirt road. Which way to you want to go left or right? " + Fore.LIGHTMAGENTA_EX).lower()
 # if user inputs left then
     if answer == "left":
-        chapter_river()
+        choices()
 
     # if user inputs right then
     if answer == "right":
-        chapter_bridge()
+        choices()
 
 def chapter_river():
     answer = input(Fore.GREEN + 
