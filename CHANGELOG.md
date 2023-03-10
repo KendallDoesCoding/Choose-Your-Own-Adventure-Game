@@ -1,3 +1,12 @@
+# [0.8.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.7.2...v0.8.0) (2023-03-10)
+
+
+### Features
+
+* check if modules are installed, if not, install the modules. ([2043384](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/204338490c9fbaa4d6996319f765696f1c7b0391))
+
+
+
 ## [0.7.2](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.7.1...v0.7.2) (2023-03-10)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * Move music to the music directory. ([85c424e](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/85c424e178030f7bbab8908e145d1e5648dd2180))
-
-
-
-# [0.6.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.5.0...v0.6.0) (2023-03-05)
-
-
-### Features
-
-* add emojis to print statements via unicode. ([b71701f](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/b71701f8a8398d054e86bb56037a34e8147d2a4e))
 
 
 
