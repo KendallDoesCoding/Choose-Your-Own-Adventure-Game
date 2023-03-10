@@ -7,18 +7,17 @@ Currently, there are **2** possible winning solutions. In the future versions, t
 # Requirements
 
 - Python 3.0
-
-# Steps to Run
+- Colorama (Pip module)
+- Playsound 1.2.2 (Pip module)
 
 Please ensure you first open up the terminal and paste.
 
 ```
 pip install -r requirements.txt
-
-
 ```
 
-Then run the file, `main.py`
+# Steps to Run
+Run `main.py`
 
 # Run in GitPod
 
