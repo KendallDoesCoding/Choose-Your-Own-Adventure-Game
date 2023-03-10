@@ -41,10 +41,10 @@ def main():
     answer = input(Fore.YELLOW + "Do you want music? \U0001F3B5 (y/n) " + Fore.LIGHTBLUE_EX)
     if answer == "y" or answer == "yes":
         music()
-        start()
+        random.choice(my_list)()
     if answer == "n" or answer == "no":
         print(Fore.LIGHTGREEN_EX + "Okay \U0001F600")
-        start()
+        random.choice(my_list)()
 
 
 

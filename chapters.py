@@ -1,18 +1,20 @@
 # import the colorama module
+import random
 from colorama import Fore
 import colorama
 colorama.init(convert=True)
 
 # start the game
 def start():
+
     answer = input(Fore.GREEN + "You are on a dirt road. Which way to you want to go left or right? " + Fore.LIGHTMAGENTA_EX).lower()
 # if user inputs left then
     if answer == "left":
-        chapter_river()
+        random.choice(my_list)()
 
     # if user inputs right then
     if answer == "right":
-        chapter_bridge()
+        random.choice(my_list)()
 
 def chapter_river():
     answer = input(Fore.GREEN + 
@@ -47,7 +49,7 @@ def chapter_river():
             game_over(Fore.RED + "You died of thirst.\U0001F480 ")
         else: 
             print(Fore.RED + "Not a valid answer. You die. \U0001F480")
-            game_over()
+            random.choice(my_list)()
         # q4
         answer = input(Fore.GREEN + 
             "You drank 5 liters of water and now you feel refreshed. Do you want to walk further or go back home? (further/home) " + Fore.LIGHTMAGENTA_EX).lower(
@@ -132,4 +134,7 @@ def game_over(message: str = None, *, end_game=True, win=False):
     elif answer == "n":
         print(Fore.BLUE + "Thanks for playing!")
         exit()
+
+my_list = [chapter_bridge, chapter_lake, chapter_stranger, chapter_river]
+
 
