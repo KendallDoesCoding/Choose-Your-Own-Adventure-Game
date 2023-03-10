@@ -1,5 +1,9 @@
 # Choose Your Own Adventure Game
 
+<div align="center">
+<img src="https://socialify.git.ci/KendallDoesCoding/Choose-Your-Own-Adventure-Game/image?description=1&descriptionEditable=A%20simple%20Choose%20Your%20Own%20Adventure%20Game%20created%20using%20Python.%0A%0A&forks=1&issues=1&language=1&name=1&owner=1&pattern=Solid&pulls=1&stargazers=1&theme=Dark" alt="Choose-Your-Own-Adventure-Game" width="640" height="320" />
+</div>
+
 A simple **Choose Your Own Adventure Game** created using python.
 
 Currently, there are **2** possible winning solutions. In the future versions, there will be more questions and thus more winning solutions.
