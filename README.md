@@ -44,7 +44,7 @@ Before contributing, it is highly recommended to go through the [CONTRIBUTING GU
 # Music
 
 The following songs are licensed under Creative Commons: By Attribution 3.0 License
-http://creativecommons.org/licenses/by/3.0
+http://creativecommons.org/licenses/by/3.0.
 Music promoted by https://www.chosic.com/free-music/all
 
 - Fluffing a Duck by Kevin Macleod
