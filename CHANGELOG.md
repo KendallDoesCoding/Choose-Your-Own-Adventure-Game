@@ -1,3 +1,12 @@
+# [0.10.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.9.0...v0.10.0) (2023-03-11)
+
+
+### Features
+
+* add more music and make it so that a random song plays everytime. ([f49a93c](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/f49a93cdd27c17560ff20c672a063022f5c7e855))
+
+
+
 # [0.9.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.8.2...v0.9.0) (2023-03-10)
 
 
@@ -36,10 +45,6 @@
 ### Features
 
 * check if modules are installed, if not, install the modules. ([2043384](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/204338490c9fbaa4d6996319f765696f1c7b0391))
-
-
-
-## [0.7.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.7.0...v0.7.1) (2023-03-10)
 
 
 
