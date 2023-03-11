@@ -21,6 +21,7 @@ pip install -r requirements.txt
 ```
 
 # Steps to Run
+
 Run `main.py`
 
 # Run in GitPod
@@ -40,6 +41,24 @@ It is good to see you contributing to the project.
 
 Before contributing, it is highly recommended to go through the [CONTRIBUTING GUIDELINES](./CONTRIBUTING.md).
 
-## Example
+# Music
+
+The following songs are licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0
+Music promoted by https://www.chosic.com/free-music/all
+
+- Fluffing a Duck by Kevin Macleod
+- Happy and Joyful Children
+- Bliss by Luke Bergs
+- Tropical Soul by Luke Bergs
+- New Lands by Alex-Productions
+- Beach Vibes by Luke Bergs
+
+Further, the following songs are used (copyright free, no license required):
+
+- Snake On The Beach by Nico Staf
+- A Parisian Cafe by Aaron Kenny
+
+# Example
 
 https://user-images.githubusercontent.com/99717469/186931286-78aa19cb-e13e-4364-b5ee-12efd6fcaae8.mov
