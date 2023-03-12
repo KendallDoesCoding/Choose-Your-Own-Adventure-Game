@@ -1,12 +1,13 @@
 import colorama
 from colorama import Fore
 import random
-
 import os
 
+import musicTimer
+import threading
 
 # Initialize songs
-def fluffingaduck():
+def fluffingaduck(print_song_name=True):
     import os
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
     import pygame
@@ -16,9 +17,13 @@ def fluffingaduck():
     sound = pygame.mixer.Sound("Music/Fluffing-A-Duck.mp3")
     sound.set_volume(0.5)              # Now plays at 50% of full volume.
     sound.play()
-    print(Fore.RED + "Current Playing - Fluffing a Duck by Kevin Macleod") 
+    
+    if print_song_name:
+        print(Fore.RED + "Current Playing - Fluffing a Duck by Kevin Macleod") 
 
-def snakeonthebeach():
+    return sound
+
+def snakeonthebeach(print_song_name=True):
     import os
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
     import pygame
@@ -28,10 +33,13 @@ def snakeonthebeach():
     sound = pygame.mixer.Sound("Music/sotb.mp3")
     sound.set_volume(0.2)              # Now plays at 20% of full volume.
     sound.play()
-    print(Fore.RED + "Current Playing - Snake On The Beach by Nico Staf") 
+    
+    if print_song_name:
+        print(Fore.RED + "Current Playing - Snake On The Beach by Nico Staf") 
 
+    return sound
 
-def aparisiancafe():
+def aparisiancafe(print_song_name=True):
     import os
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
     import pygame
@@ -40,9 +48,13 @@ def aparisiancafe():
     pygame.mixer.init()
     sound = pygame.mixer.Sound("Music/A Parisian Cafe.mp3")
     sound.play()
-    print(Fore.RED + "Current Playing - A Parisian Cafe by Aaron Kenny") 
+    
+    if print_song_name:
+        print(Fore.RED + "Current Playing - A Parisian Cafe by Aaron Kenny") 
 
-def bliss():
+    return sound
+
+def bliss(print_song_name=True):
     import os
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
     import pygame
@@ -52,9 +64,13 @@ def bliss():
     sound = pygame.mixer.Sound("Music/bliss.mp3")
     sound.set_volume(0.9)              # Now plays at 90% of full volume.
     sound.play()
-    print(Fore.RED + "Current Playing - Bliss by Luke Bergs") 
+    
+    if print_song_name:
+        print(Fore.RED + "Current Playing - Bliss by Luke Bergs") 
 
-def happynjoyfulchildren():
+    return sound
+
+def happynjoyfulchildren(print_song_name=True):
     import os
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
     import pygame
@@ -64,9 +80,13 @@ def happynjoyfulchildren():
     sound = pygame.mixer.Sound("Music/happyandjoyfulchildren.mp3")
     sound.set_volume(0.9)              # Now plays at 90% of full volume.
     sound.play()
-    print(Fore.RED + "Current Playing - Happy and Joyful Children") 
+    
+    if print_song_name:
+        print(Fore.RED + "Current Playing - Happy and Joyful Children") 
 
-def tropicalsoul():
+    return sound
+
+def tropicalsoul(print_song_name=True):
     import os
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
     import pygame
@@ -76,9 +96,13 @@ def tropicalsoul():
     sound = pygame.mixer.Sound("Music/tropicalsoul.mp3")
     sound.set_volume(0.9)              # Now plays at 90% of full volume.
     sound.play()
-    print(Fore.RED + "Current Playing - Tropical Soul by Luke Bergs") 
 
-def newlands():
+    if print_song_name:
+        print(Fore.RED + "Current Playing - Tropical Soul by Luke Bergs") 
+
+    return sound
+
+def newlands(print_song_name=True):
     import os
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
     import pygame
@@ -88,9 +112,13 @@ def newlands():
     sound = pygame.mixer.Sound("Music/newlands.mp3")
     sound.set_volume(0.5)              # Now plays at 50% of full volume.
     sound.play()
-    print(Fore.RED + "Current Playing - New Lands by Alex-Productions")
 
-def beachvibes():
+    if print_song_name:
+        print(Fore.RED + "Current Playing - New Lands by Alex-Productions")
+
+    return sound
+
+def beachvibes(print_song_name=True):
     import os
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
     import pygame
@@ -100,22 +128,31 @@ def beachvibes():
     sound = pygame.mixer.Sound("Music/beachvibes.mp3")
     sound.set_volume(0.5)              # Now plays at 50% of full volume.
     sound.play()
-    print(Fore.RED + "Current Playing - Beach Vibes by Luke Bergs")
 
+    if print_song_name:
+        print(Fore.RED + "Current Playing - Beach Vibes by Luke Bergs")
 
+    return sound
 
 songs = [fluffingaduck, snakeonthebeach, aparisiancafe, bliss, happynjoyfulchildren, tropicalsoul, newlands, beachvibes]
 
-
 def music():
-
     import pygame
 
     pygame.init()
     pygame.mixer.init()
-    sound = random.choice(songs)()
+    
+    start_song()
     print(Fore.BLUE + "Music has started")
+
+
+# Another function to not print all the stuff when starting new song
+def start_song(print_song_name=True):
+    sound = random.choice(songs)(print_song_name)
+
+    # create a Timer object that will run this function again after the song has ended
+    musicTimer.musicTimerObj = threading.Timer(sound.get_length(), start_song, kwargs={"print_song_name": False})
+    musicTimer.musicTimerObj.start()
+
+
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
-
-
-
