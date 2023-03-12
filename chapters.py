@@ -1,6 +1,6 @@
-# import the colorama module
 import random
 
+# import the colorama module
 import colorama
 from colorama import Fore
 
