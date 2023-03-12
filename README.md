@@ -12,7 +12,6 @@ Currently, there are **3** possible winning solutions. In the future versions, t
 
 - Python 3.0
 - Colorama (Pip module)
-- Playsound 1.2.2 (Pip module)
 
 Please ensure you first open up the terminal and paste.
 
