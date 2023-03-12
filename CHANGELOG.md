@@ -1,3 +1,12 @@
+# [0.11.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.10.0...v0.11.0) (2023-03-12)
+
+
+### Features
+
+* add another winning solution/another chapter to the game. ([51c7120](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/51c712089706a3fcd75019d4c656fa7db47e6cc4))
+
+
+
 # [0.10.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.9.0...v0.10.0) (2023-03-11)
 
 
@@ -31,20 +40,6 @@
 ### Bug Fixes
 
 * missing one = (program cannot run) ([bac5fbd](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/bac5fbdf3125876a257e735533a43ccd51a148c4))
-
-
-
-# [0.8.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.7.1...v0.8.0) (2023-03-10)
-
-
-### Bug Fixes
-
-* game ended without printing reason why. ([4a4b001](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/4a4b001e53abaaef509a9020304dde198ddd3931)), closes [#22](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/22)
-
-
-### Features
-
-* check if modules are installed, if not, install the modules. ([2043384](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/204338490c9fbaa4d6996319f765696f1c7b0391))
 
 
 
