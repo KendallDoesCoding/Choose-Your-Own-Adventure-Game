@@ -135,7 +135,7 @@ def chapter_stranger():
             Fore.RED +
             "The stranger was not pleased by you and murdered you. \U0001F480")
     elif answer == "y":
-        answer = input(Fore.GREEN + "You talk a wizard and they ask you,"
+        answer = input(Fore.GREEN + "You talk to a wizard and they ask you,"
                        "do you want to be a wizard? (y/n) " +
                        Fore.LIGHTMAGENTA_EX).lower()
         if answer == "y":
