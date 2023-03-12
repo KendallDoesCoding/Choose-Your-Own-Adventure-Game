@@ -1,3 +1,13 @@
+## [0.11.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.11.0...v0.11.1) (2023-03-12)
+
+
+### Bug Fixes
+
+* grammer mistakes ([a9b4abb](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/a9b4abb1f20f4d63951c3d640aaa6aa198f69005))
+* TypeError: 'win' is an invalid keyword argument for print() ([a09ea56](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/a09ea561956e9476a452fe491f7295ab902184f4))
+
+
+
 # [0.11.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.10.0...v0.11.0) (2023-03-12)
 
 
@@ -31,15 +41,6 @@
 ### Bug Fixes
 
 * make music volume softer ([11cb1be](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/11cb1be0ac3058cfa39964bb2fb4cda3711997ac)), closes [#26](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/26)
-
-
-
-## [0.8.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.8.0...v0.8.1) (2023-03-10)
-
-
-### Bug Fixes
-
-* missing one = (program cannot run) ([bac5fbd](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/bac5fbdf3125876a257e735533a43ccd51a148c4))
 
 
 
