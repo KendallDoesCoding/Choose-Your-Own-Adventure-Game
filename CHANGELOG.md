@@ -1,3 +1,12 @@
+## [0.11.2](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.11.1...v0.11.2) (2023-03-12)
+
+
+### Bug Fixes
+
+* grammer. (it should be "currently playing" not "current playing". ([2fee6d8](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/2fee6d8c9ec65989ba83e99427e807f3450bad8c))
+
+
+
 ## [0.11.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.11.0...v0.11.1) (2023-03-12)
 
 
@@ -32,15 +41,6 @@
 ### Features
 
 * select random chapter to behgin with ([6f605cd](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/6f605cda9182f9c40fa9ed2621388cc021c3a720)), closes [#19](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/19)
-
-
-
-## [0.8.2](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.8.1...v0.8.2) (2023-03-10)
-
-
-### Bug Fixes
-
-* make music volume softer ([11cb1be](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/11cb1be0ac3058cfa39964bb2fb4cda3711997ac)), closes [#26](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/26)
 
 
 
