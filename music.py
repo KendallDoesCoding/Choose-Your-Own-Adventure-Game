@@ -16,7 +16,7 @@ def fluffingaduck():
     sound = pygame.mixer.Sound("Music/Fluffing-A-Duck.mp3")
     sound.set_volume(0.5)              # Now plays at 50% of full volume.
     sound.play()
-    print(Fore.RED + "Current Playing - Fluffing a Duck by Kevin Macleod") 
+    print(Fore.RED + "Currently Playing - Fluffing a Duck by Kevin Macleod") 
 
 def snakeonthebeach():
     import os
@@ -28,7 +28,7 @@ def snakeonthebeach():
     sound = pygame.mixer.Sound("Music/sotb.mp3")
     sound.set_volume(0.2)              # Now plays at 20% of full volume.
     sound.play()
-    print(Fore.RED + "Current Playing - Snake On The Beach by Nico Staf") 
+    print(Fore.RED + "Currently Playing - Snake On The Beach by Nico Staf") 
 
 
 def aparisiancafe():
@@ -40,7 +40,7 @@ def aparisiancafe():
     pygame.mixer.init()
     sound = pygame.mixer.Sound("Music/A Parisian Cafe.mp3")
     sound.play()
-    print(Fore.RED + "Current Playing - A Parisian Cafe by Aaron Kenny") 
+    print(Fore.RED + "Currently Playing - A Parisian Cafe by Aaron Kenny") 
 
 def bliss():
     import os
@@ -52,7 +52,7 @@ def bliss():
     sound = pygame.mixer.Sound("Music/bliss.mp3")
     sound.set_volume(0.9)              # Now plays at 90% of full volume.
     sound.play()
-    print(Fore.RED + "Current Playing - Bliss by Luke Bergs") 
+    print(Fore.RED + "Currently Playing - Bliss by Luke Bergs") 
 
 def happynjoyfulchildren():
     import os
@@ -64,7 +64,7 @@ def happynjoyfulchildren():
     sound = pygame.mixer.Sound("Music/happyandjoyfulchildren.mp3")
     sound.set_volume(0.9)              # Now plays at 90% of full volume.
     sound.play()
-    print(Fore.RED + "Current Playing - Happy and Joyful Children") 
+    print(Fore.RED + "Currently Playing - Happy and Joyful Children") 
 
 def tropicalsoul():
     import os
@@ -76,7 +76,7 @@ def tropicalsoul():
     sound = pygame.mixer.Sound("Music/tropicalsoul.mp3")
     sound.set_volume(0.9)              # Now plays at 90% of full volume.
     sound.play()
-    print(Fore.RED + "Current Playing - Tropical Soul by Luke Bergs") 
+    print(Fore.RED + "Currently Playing - Tropical Soul by Luke Bergs") 
 
 def newlands():
     import os
@@ -88,7 +88,7 @@ def newlands():
     sound = pygame.mixer.Sound("Music/newlands.mp3")
     sound.set_volume(0.5)              # Now plays at 50% of full volume.
     sound.play()
-    print(Fore.RED + "Current Playing - New Lands by Alex-Productions")
+    print(Fore.RED + "Currently Playing - New Lands by Alex-Productions")
 
 def beachvibes():
     import os
@@ -100,7 +100,7 @@ def beachvibes():
     sound = pygame.mixer.Sound("Music/beachvibes.mp3")
     sound.set_volume(0.5)              # Now plays at 50% of full volume.
     sound.play()
-    print(Fore.RED + "Current Playing - Beach Vibes by Luke Bergs")
+    print(Fore.RED + "Currently Playing - Beach Vibes by Luke Bergs")
 
 
 
