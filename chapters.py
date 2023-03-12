@@ -59,7 +59,7 @@ def chapter_river():
         )
         # if user inputs further then
         if answer == "further":
-            game_over(Fore.BLUE + "You walked 100 more miles and you WIN the game! \U0001f3c6",
+            game_over(Fore.RED + "You walked 100 more miles and you WIN the game! \U0001f3c6",
                       win=True)
         # if user inputs home then
         if answer == "home":
@@ -128,7 +128,7 @@ def chapter_tree():
         if answer == "y":
             game_over(Fore.RED + "You ate the pears but they were poisonous and you died. \U0001F480")
         elif answer == "n":
-            game_over("You were so hungry that you were nearly going to die in a few seconds, but a lovely gentleman gave you some food and you WIN the game! \U0001f3c6", win=True)
+            game_over(Fore.RED + "You were so hungry that you were nearly going to die in a few seconds, but a lovely gentleman gave you some food and you WIN the game! \U0001f3c6", win=True)
         else:
             print(Fore.RED + "Not a valid answer. You die. \U0001F480")
             game_over()
