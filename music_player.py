@@ -23,7 +23,8 @@ def fluffingaduck(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Currently Playing - Fluffing a Duck by Kevin Macleod")
+        print(Fore.RED +
+              "Currently Playing - Fluffing a Duck by Kevin Macleod")
 
     return sound
 

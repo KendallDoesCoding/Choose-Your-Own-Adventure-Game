@@ -83,8 +83,11 @@ def chapter_river():
             + Fore.LIGHTMAGENTA_EX).lower()
         # if user inputs further then
         if answer == "further":
-            game_over(Fore.RED + "You walked 100 more miles and you WIN the game! \U0001f3c6",
-                      win=True)
+            game_over(
+                Fore.RED +
+                "You walked 100 more miles and you WIN the game! \U0001f3c6",
+                win=True,
+            )
         # if user inputs home then
         if answer == "home":
             game_over(
@@ -169,15 +172,29 @@ def chapter_lake():
 
 
 def chapter_tree():
-    answer = input(Fore.GREEN + "You are very hungry and you see a tree with apples, do you want to eat the fruit? (y/n) " + Fore.LIGHTMAGENTA_EX)
+    answer = input(
+        Fore.GREEN +
+        "You are very hungry and you see a tree with apples, do you want to eat the fruit? (y/n) "
+        + Fore.LIGHTMAGENTA_EX)
     if answer == "y":
-        game_over(Fore.RED + "You ate the fruit but it was poisonous and you died. \U0001F480")
+        game_over(
+            Fore.RED +
+            "You ate the fruit but it was poisonous and you died. \U0001F480")
     elif answer == "n":
-        answer = input("You are nearly starving to death. Do you want to eat Pears instead of apples? (y/n) " + Fore.LIGHTMAGENTA_EX).lower()
+        answer = input(
+            "You are nearly starving to death. Do you want to eat Pears instead of apples? (y/n) "
+            + Fore.LIGHTMAGENTA_EX).lower()
         if answer == "y":
-            game_over(Fore.RED + "You ate the pears but they were poisonous and you died. \U0001F480")
+            game_over(
+                Fore.RED +
+                "You ate the pears but they were poisonous and you died. \U0001F480"
+            )
         elif answer == "n":
-            game_over(Fore.RED + "You were so hungry that you were nearly going to die in a few seconds, but a lovely gentleman gave you some food and you WIN the game! \U0001f3c6", win=True)
+            game_over(
+                Fore.RED +
+                "You were so hungry that you were nearly going to die in a few seconds, but a lovely gentleman gave you some food and you WIN the game! \U0001f3c6",
+                win=True,
+            )
 
         else:
             print(Fore.RED + "Not a valid answer. You die. \U0001F480")
