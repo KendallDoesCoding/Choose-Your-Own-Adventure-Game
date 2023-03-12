@@ -1,3 +1,12 @@
+## [0.11.3](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.11.2...v0.11.3) (2023-03-12)
+
+
+### Bug Fixes
+
+* slight grammer - missing "to" ([2c8bc5e](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/2c8bc5efec9e846e12df0eacc7e3460ee0744451))
+
+
+
 ## [0.11.2](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.11.1...v0.11.2) (2023-03-12)
 
 
@@ -32,15 +41,6 @@
 ### Features
 
 * add more music and make it so that a random song plays everytime. ([f49a93c](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/f49a93cdd27c17560ff20c672a063022f5c7e855))
-
-
-
-# [0.9.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.8.2...v0.9.0) (2023-03-10)
-
-
-### Features
-
-* select random chapter to behgin with ([6f605cd](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/6f605cda9182f9c40fa9ed2621388cc021c3a720)), closes [#19](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/19)
 
 
 
