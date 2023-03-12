@@ -1,3 +1,12 @@
+# [0.12.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.11.3...v0.12.0) (2023-03-12)
+
+
+### Features
+
+* loop music if song/music over and game is still going on (bc99db084ce4e10c3e148bc39a02a79e8f590b85) ([0d67e43](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/0d67e434af96e58f8624cb892e822f357de99150))
+
+
+
 ## [0.11.3](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.11.2...v0.11.3) (2023-03-12)
 
 
@@ -32,15 +41,6 @@
 ### Features
 
 * add another winning solution/another chapter to the game. ([51c7120](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/51c712089706a3fcd75019d4c656fa7db47e6cc4))
-
-
-
-# [0.10.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.9.0...v0.10.0) (2023-03-11)
-
-
-### Features
-
-* add more music and make it so that a random song plays everytime. ([f49a93c](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/f49a93cdd27c17560ff20c672a063022f5c7e855))
 
 
 
