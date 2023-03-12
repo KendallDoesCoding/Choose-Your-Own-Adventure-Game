@@ -60,4 +60,4 @@ Further, the following songs are used (copyright free, no license required):
 
 # Example
 
-https://user-images.githubusercontent.com/99717469/186931286-78aa19cb-e13e-4364-b5ee-12efd6fcaae8.mov
+https://user-images.githubusercontent.com/84712013/224546811-9e0fdfe4-4f2f-4e6e-847f-1ff43da9dfc5.mp4
