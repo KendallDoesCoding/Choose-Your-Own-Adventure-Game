@@ -1,3 +1,5 @@
+from music import *
+
 # import the colorama module
 import random
 from colorama import Fore
@@ -36,14 +38,15 @@ def chapter_river():
         
         # if user inputs yes then
         elif answer == "yes":
+            print(Fore.GREEN + "You went 10 miles walking and bought 10 liters of drinking water. "
+            )
         # q3
             answer = input(Fore.GREEN +
             "You are thirsty, do you want to drink some water (yes/no)? " + Fore.LIGHTMAGENTA_EX).lower()
         # if user inputs yes then
         if answer == "yes":
-            print(Fore.GREEN + 
-                "You went 10 miles walking and bought 10 liters of drinking water. "
-            )
+            print(Fore.GREEN + "You drank 5 liters of water and now you feel refreshed.")
+
         # if user inputs no then
         elif answer == "no":
             game_over(Fore.RED + "You died of thirst.\U0001F480 ")
@@ -85,24 +88,6 @@ def chapter_bridge():
         print(Fore.RED + "Not a valid answer. You die. \U0001F480 ")
         game_over()
 
-def chapter_lake():
-    answer = input(Fore.GREEN + "You turned left and you come to a lake,"
-                   "do you want to swim or go back? (swim/back) " + Fore.LIGHTMAGENTA_EX).lower()
-    if answer == "swim":
-        game_over(Fore.RED + "You swam across the lake and were eaten by a shark. \U0001F480 ")
-
-    elif answer == "back":
-        answer = input(Fore.GREEN +
-            "You go back to the main road."
-            "Now you can decide to drive forward or turn left. (forward/left) " + Fore.LIGHTMAGENTA_EX).lower()
-        if answer == "forward":
-            game_over(Fore.RED + "You drive forward and crash into a tree and die. \U0001F480")
-        elif answer == "left":
-            game_over(Fore.RED + "You died. \U0001F480")
-    else:
-        print(Fore.RED + "Not a valid answer. You die.")
-
-
 def chapter_stranger():
     answer = input(Fore.GREEN +
         "You cross the bridge and meet a stranger, do you talk to them? (y/n) " + Fore.LIGHTMAGENTA_EX).lower()
@@ -117,6 +102,37 @@ def chapter_stranger():
         elif answer == "n":
             game_over(Fore.RED + "The stranger was not pleased by you and murdered you. \U0001F480")
 
+def chapter_lake():
+    answer = input(Fore.GREEN + "You turned left and you come to a lake,"
+                   "do you want to swim or go back? (swim/back) " + Fore.LIGHTMAGENTA_EX).lower()
+    if answer == "swim":
+        game_over(Fore.RED + "You swam across the lake and were eaten by a shark. \U0001F480 ")
+
+    elif answer == "back":
+        answer = input(Fore.GREEN +
+            "You go back to the main road."
+            "Now you can decide to drive forward or turn left. (forward/left) " + Fore.LIGHTMAGENTA_EX).lower()
+        if answer == "forward":
+            chapter_tree()
+        elif answer == "left":
+            game_over(Fore.RED + "You died. \U0001F480")
+    else:
+        print(Fore.RED + "Not a valid answer. You die.")
+
+def chapter_tree():
+    answer = input(Fore.GREEN + "You are very hungry and you see a tree with apples, do you want to eat the fruit?")
+    if answer == "yes":
+        game_over(Fore.RED + "You ate the fruit but it was poisonous and you died. \U0001F480")
+    elif answer == "no":
+        answer = input("You are nearly starving to death. Do you want to eat Pears instead of apples?").lower()
+        if answer == "yes":
+            game_over(Fore.RED + "You ate the pears but they were poisonous and you died. \U0001F480")
+        elif answer == "no":
+            print("You were so hungry that you were nearly going to die ina few seconds, but a lovely gentleman gave you some food and you WIN the game! \U0001f3c6", win=True)
+        else:
+            print(Fore.RED + "Not a valid answer. You die. \U0001F480")
+            game_over()
+        
 
 
 def game_over(message: str = None, *, end_game=True, win=False):
@@ -128,13 +144,20 @@ def game_over(message: str = None, *, end_game=True, win=False):
     else:
         print(Fore.BLUE + "Game over")
         print(Fore.LIGHTYELLOW_EX + "Thanks for playing!")
-    answer = input(Fore.GREEN + "Do you want to play again? (y/n) " + Fore.LIGHTMAGENTA_EX).lower()
-    if answer == "y":
-        start()
-    elif answer == "n":
-        print(Fore.BLUE + "Thanks for playing!")
-        exit()
+    if game_over:
+        # Play Again
+        answer = input(Fore.YELLOW + "Do you want to play again? (y/n) " + Fore.LIGHTBLUE_EX)
+        if answer == "y" or answer == "yes":
+            random.choice(my_list)()
+        if music == "on":
+            print(Fore.GREEN + "Music is on")
+        elif music == "off":
+            print(Fore.RED + "Music is off")
+            music()
+        else:
+            print(Fore.RED + "Thanks for playing!")
+            exit()
 
-my_list = [chapter_bridge, chapter_lake, chapter_stranger, chapter_river]
+my_list = [chapter_bridge, chapter_lake]
 
 

@@ -6,7 +6,7 @@
 
 A simple **Choose Your Own Adventure Game** created using python.
 
-Currently, there are **2** possible winning solutions. In the future versions, there will be more questions and thus more winning solutions.
+Currently, there are **3** possible winning solutions. In the future versions, there will be more questions and thus more winning solutions.
 
 # Requirements
 
