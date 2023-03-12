@@ -23,7 +23,7 @@ def fluffingaduck(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Current Playing - Fluffing a Duck by Kevin Macleod")
+        print(Fore.RED + "Currently Playing - Fluffing a Duck by Kevin Macleod")
 
     return sound
 
@@ -41,7 +41,7 @@ def snakeonthebeach(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Current Playing - Snake On The Beach by Nico Staf")
+        print(Fore.RED + "Currently Playing - Snake On The Beach by Nico Staf")
 
     return sound
 
@@ -58,7 +58,7 @@ def aparisiancafe(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Current Playing - A Parisian Cafe by Aaron Kenny")
+        print(Fore.RED + "Currently Playing - A Parisian Cafe by Aaron Kenny")
 
     return sound
 
@@ -76,7 +76,7 @@ def bliss(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Current Playing - Bliss by Luke Bergs")
+        print(Fore.RED + "Currently Playing - Bliss by Luke Bergs")
 
     return sound
 
@@ -94,7 +94,7 @@ def happynjoyfulchildren(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Current Playing - Happy and Joyful Children")
+        print(Fore.RED + "Currently Playing - Happy and Joyful Children")
 
     return sound
 
@@ -112,7 +112,7 @@ def tropicalsoul(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Current Playing - Tropical Soul by Luke Bergs")
+        print(Fore.RED + "Currently Playing - Tropical Soul by Luke Bergs")
 
     return sound
 
@@ -130,7 +130,7 @@ def newlands(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Current Playing - New Lands by Alex-Productions")
+        print(Fore.RED + "Currently Playing - New Lands by Alex-Productions")
 
     return sound
 
@@ -148,7 +148,7 @@ def beachvibes(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Current Playing - Beach Vibes by Luke Bergs")
+        print(Fore.RED + "Currently Playing - Beach Vibes by Luke Bergs")
 
     return sound
 
