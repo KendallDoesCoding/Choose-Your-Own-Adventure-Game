@@ -14,7 +14,7 @@ if missing:
 
 # import dependencies
 from chapters import *
-from music import * 
+from music_player import *
 
 # heading text!
 heading = 'Choose Your Own Adventure Game!'

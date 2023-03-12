@@ -5,7 +5,7 @@ import threading
 import colorama
 from colorama import Fore
 
-import musicTimer
+import music.musicTimer as musicTimer
 
 # Initialize songs
 

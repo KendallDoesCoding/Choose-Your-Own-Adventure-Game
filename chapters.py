@@ -4,8 +4,8 @@ import random
 import colorama
 from colorama import Fore
 
-import musicTimer  # stop music thread in this file
-from music import *
+import music.musicTimer as musicTimer  # stop music thread in this file
+from music_player import *
 
 colorama.init(convert=True)
 
@@ -218,7 +218,7 @@ def game_over(message: str = None, *, end_game=True, win=False):
             print(Fore.GREEN + "Music is on")
         elif music == "off":
             print(Fore.RED + "Music is off")
-            music()
+            music.music()
         else:
             print(Fore.RED + "Thanks for playing!")
             musicTimer.musicTimerObj.cancel()  # stop music thread
