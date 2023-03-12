@@ -120,15 +120,15 @@ def chapter_lake():
         print(Fore.RED + "Not a valid answer. You die.")
 
 def chapter_tree():
-    answer = input(Fore.GREEN + "You are very hungry and you see a tree with apples, do you want to eat the fruit?")
-    if answer == "yes":
+    answer = input(Fore.GREEN + "You are very hungry and you see a tree with apples, do you want to eat the fruit? (y/n) " + Fore.LIGHTMAGENTA_EX)
+    if answer == "y":
         game_over(Fore.RED + "You ate the fruit but it was poisonous and you died. \U0001F480")
-    elif answer == "no":
-        answer = input("You are nearly starving to death. Do you want to eat Pears instead of apples?").lower()
-        if answer == "yes":
+    elif answer == "n":
+        answer = input("You are nearly starving to death. Do you want to eat Pears instead of apples? (y/n) " + Fore.LIGHTMAGENTA_EX).lower()
+        if answer == "y":
             game_over(Fore.RED + "You ate the pears but they were poisonous and you died. \U0001F480")
-        elif answer == "no":
-            print("You were so hungry that you were nearly going to die ina few seconds, but a lovely gentleman gave you some food and you WIN the game! \U0001f3c6", win=True)
+        elif answer == "n":
+            game_over("You were so hungry that you were nearly going to die in a few seconds, but a lovely gentleman gave you some food and you WIN the game! \U0001f3c6", win=True)
         else:
             print(Fore.RED + "Not a valid answer. You die. \U0001F480")
             game_over()
