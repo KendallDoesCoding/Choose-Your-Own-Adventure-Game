@@ -21,7 +21,7 @@ def start():
 
 def chapter_river():
     answer = input(Fore.GREEN + 
-        "You come to a river, you can walk around it or swim across. "
+        "You come to a river, you can walk around it or swim across."
         "Type walk to walk around & swim to swim across. " + Fore.LIGHTMAGENTA_EX).lower()
     # if user inputs swim then
     if answer == "swim":
@@ -31,7 +31,7 @@ def chapter_river():
         # q2
         answer = input(Fore.GREEN + 
             "You walked for many miles, ran out of water and remembered "
-            "that there was a shop far away (10 miles/16kms) which supplies water. "
+            "that there was a shop far away (10 miles/16kms) which supplies water."
             "Do you want to go there (yes/no)? " + Fore.LIGHTMAGENTA_EX).lower()
             # if user inputs no then
         if answer == "no":
@@ -70,12 +70,12 @@ def chapter_river():
             game_over()
         
 def chapter_bridge():
-    answer = input(Fore.GREEN + "You come to a bridge, it looks wobbly, "
+    answer = input(Fore.GREEN + "You come to a bridge, it looks wobbly,"
                    "do you want it or do you want to head back? (cross/back) " + Fore.LIGHTMAGENTA_EX).lower()
     # if user inputs back then
     if answer == "back":
         answer = input(Fore.GREEN + 
-            "You go back to the main road. "
+            "You go back to the main road."
             "Now you can decide to drive forward or turn left. (forward/left) " + Fore.LIGHTMAGENTA_EX).lower()
     if answer == "forward":
         game_over(Fore.RED + "You drive forward and crash into a tree and die.\U0001F480 ")
@@ -104,22 +104,21 @@ def chapter_stranger():
             game_over(Fore.RED + "The stranger was not pleased by you and murdered you. \U0001F480")
 
 def chapter_lake():
-    answer = input(Fore.GREEN + "You turned left and you come to a lake, "
+    answer = input(Fore.GREEN + "You turned left and you come to a lake,"
                    "do you want to swim or go back? (swim/back) " + Fore.LIGHTMAGENTA_EX).lower()
     if answer == "swim":
         game_over(Fore.RED + "You swam across the lake and were eaten by a shark. \U0001F480 ")
 
     elif answer == "back":
         answer = input(Fore.GREEN +
-            "You go back to the main road. "
+            "You go back to the main road."
             "Now you can decide to drive forward or turn left. (forward/left) " + Fore.LIGHTMAGENTA_EX).lower()
         if answer == "forward":
             chapter_tree()
         elif answer == "left":
             game_over(Fore.RED + "You died. \U0001F480")
     else:
-        print(Fore.RED + "Not a valid answer. You die.")
-        game_over()
+        game_over(Fore.RED + "Not a valid answer. You die.")
 
 def chapter_tree():
     answer = input(Fore.GREEN + "You are very hungry and you see a tree with apples, do you want to eat the fruit?")
@@ -130,7 +129,7 @@ def chapter_tree():
         if answer == "yes":
             game_over(Fore.RED + "You ate the pears but they were poisonous and you died. \U0001F480")
         elif answer == "no":
-            game_over("You were so hungry that you were nearly going to die in a few seconds, but a lovely gentleman gave you some food and you WIN the game! \U0001f3c6", win=True)
+            game_over("You were so hungry that you were nearly going to die ina few seconds, but a lovely gentleman gave you some food and you WIN the game! \U0001f3c6", win=True)
         else:
             print(Fore.RED + "Not a valid answer. You die. \U0001F480")
             game_over()
