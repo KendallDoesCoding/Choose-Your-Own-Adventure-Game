@@ -1,3 +1,12 @@
+# [0.13.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.12.0...v0.13.0) (2023-03-13)
+
+
+### Features
+
+* create game logo ([f593016](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/f59301628feb6e75fafecfb1c2af328637389283))
+
+
+
 # [0.12.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.11.3...v0.12.0) (2023-03-12)
 
 
@@ -32,15 +41,6 @@
 
 * grammer mistakes ([a9b4abb](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/a9b4abb1f20f4d63951c3d640aaa6aa198f69005))
 * TypeError: 'win' is an invalid keyword argument for print() ([a09ea56](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/a09ea561956e9476a452fe491f7295ab902184f4))
-
-
-
-# [0.11.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.10.0...v0.11.0) (2023-03-12)
-
-
-### Features
-
-* add another winning solution/another chapter to the game. ([51c7120](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/51c712089706a3fcd75019d4c656fa7db47e6cc4))
 
 
 
