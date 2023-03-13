@@ -38,7 +38,7 @@ It is good to see you contributing to the project.
 - It is a request that you create a **Pull Request** (PR) in order to make changes in any of the files, fix grammar or add sommething to the repository.
 - Please open a **New Issue** first in order to make more/major changes.
 
-Before contributing, it is highly recommended to go through the [CONTRIBUTING GUIDELINES](./CONTRIBUTING.md).
+Before contributing, it is highly recommended to go through the [CONTRIBUTING GUIDELINES](.github/CONTRIBUTING.md).
 
 # Music
 
