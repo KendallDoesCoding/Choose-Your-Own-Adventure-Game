@@ -30,12 +30,12 @@ print(new_str2)
 
 def main():
     # welcome to the game
-    name = input(Fore.YELLOW + "Type your name: " + Fore.LIGHTBLUE_EX)
-    print(Fore.LIGHTGREEN_EX + "Welcome", name, "to this adventure!")
+    name = input(Fore.YELLOW + "Hello \U0001F44B, Please enter your Name \U0000270D : " + Fore.LIGHTBLUE_EX)
+    print(Fore.LIGHTGREEN_EX + "Welcome", name, "\U0001F91D, to the Adventure!\n")
 
     # do you want to play?
-    answer = input(Fore.YELLOW + "Do you want to play? (y/n) " +
-                   Fore.LIGHTBLUE_EX)
+    answer = input(Fore.YELLOW + "Are You Ready? (yes/no) : " +
+                   Fore.LIGHTBLUE_EX).lower()
     if answer == "y" or answer == "yes":
         # starting the game
         print(Fore.LIGHTGREEN_EX + "Let's play! \U0001F3AE")
@@ -43,14 +43,15 @@ def main():
         print("See you later! \U0001F600")
         exit()
     # do you want music?
-    answer = input(Fore.YELLOW + "Do you want music? \U0001F3B5 (y/n) " +
-                   Fore.LIGHTBLUE_EX)
+    answer = input(Fore.YELLOW + "Do you want music? \U0001F3B5 (yes/no) : " +
+                   Fore.LIGHTBLUE_EX).lower()
+
     if answer == "y" or answer == "yes":
         music()
-        random.choice(my_list)()
+        start()
     if answer == "n" or answer == "no":
-        print(Fore.LIGHTGREEN_EX + "Okay \U0001F600")
-        random.choice(my_list)()
+        print(Fore.LIGHTGREEN_EX + "Okay \U0001F600 \n")
+        start()
 
 
 if __name__ == "__main__":
