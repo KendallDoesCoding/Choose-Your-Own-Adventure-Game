@@ -6,13 +6,12 @@ import time
 
 import pkg_resources
 import numpy as np
-import matplotlib.pyplot as plt
-from PIL import Image
 
 from chapters import *
 from music_player import *
-from GUIObjects import Button, TextBox
-from GUIFuncs import seperate_text_to_rows
+
+from GUI.GUIObjects import Button, TextBox
+from GUI.GUIFuncs import seperate_text_to_rows
 
 # install missing modules
 required = {"playsound==1.2.2", "colorama==0.4.6"}
@@ -31,13 +30,6 @@ pygame.init()
 # heading text!
 
 
-ImageAddress = 'assets\images/logo.png'
-ImageItself = Image.open(ImageAddress)
-ImageNumpyFormat = np.asarray(ImageItself)
-plt.imshow(ImageNumpyFormat)
-plt.draw()
-plt.pause(1) # pause how many seconds
-plt.close()
 heading = "Choose Your Own Adventure Game!"
 copyright = "\U000000A9 2023, KendallDoesCoding, All Rights Reserved"
 new_str = Fore.BLUE + heading.center(150)
@@ -82,6 +74,7 @@ def start_sequence():
         name_text_box.draw(WINDOW)
         pygame.display.update()
 
+    # Its possible that the line is wider than the screen. This function takes care of that
     text_list = seperate_text_to_rows(f"Welcome {player_name} to this adventure!", SCR_W - 50, FONT)
 
     _continue = False
@@ -100,16 +93,10 @@ def start_sequence():
         for _i, _text in enumerate(text_list):
             WINDOW.blit(_text, (SCR_W / 2 - _text.get_size()[0] / 2, (SCR_H/2  - _text.get_size()[1] / 2) + 40 * _i))
 
-        #WINDOW.blit(text, (SCR_W / 2 - text.get_size()[0] / 2, SCR_H/2  - text.get_size()[1] / 2))
-
         pygame.display.update()
 
-    print(player_name)
 
 def main():
-    button_left = Button(SCR_W * .25, SCR_H * .75, 200, 40, text="LEFT", font_size=32, bg_color=(200, 200, 200), hover_color=(220, 220, 220))
-    button_right = Button(SCR_W * .75, SCR_H * .75, 200, 40, text="RIGHT", font_size=32, bg_color=(200, 200, 200), hover_color=(220, 220, 220))
-    buttons = [button_left, button_right]
     
     start_sequence()
 
