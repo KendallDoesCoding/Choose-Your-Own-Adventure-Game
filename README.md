@@ -1,7 +1,7 @@
 # Choose Your Own Adventure Game
 
 <div align="center">
-<img src="https://socialify.git.ci/KendallDoesCoding/Choose-Your-Own-Adventure-Game/image?description=1&descriptionEditable=A%20simple%20Choose%20Your%20Own%20Adventure%20Game%20created%20using%20Python.%0A%0A&forks=1&issues=1&language=1&name=1&owner=1&pattern=Solid&pulls=1&stargazers=1&theme=Dark" alt="Choose-Your-Own-Adventure-Game" width="640" height="320" />
+<img src="https://socialify.git.ci/KendallDoesCoding/Choose-Your-Own-Adventure-Game/image?description=1&font=Inter&forks=1&issues=1&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2FKendallDoesCoding%2FChoose-Your-Own-Adventure-Game%2F7e92194b9819b14a9fd4145716d6d8790f11eb86%2FPicture1.png&name=1&owner=1&pattern=Solid&pulls=1&stargazers=1&theme=Dark" alt="Choose-Your-Own-Adventure-Game" width="640" height="320" />
 </div>
 
 A simple **Choose Your Own Adventure Game** created using python.
