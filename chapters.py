@@ -171,6 +171,30 @@ def chapter_lake():
         game_over(Fore.RED + "Not a valid answer. You die.")
 
 
+def chapter_mountain():
+    answer = input(Fore.GREEN + "\nYou turn right and reached a mountain \U000026F0. \n"
+                                "Do you want to climb or go back? (Type \"climb/c\" to proceed or "
+                                "\"back/b\" to return) : " +
+                   Fore.LIGHTMAGENTA_EX).lower()
+    if answer == "climb" or answer == 'c':
+        game_over(
+            Fore.RED +
+            "You climbed to the peak \nbut due to low temperature you frozen. \U0001F976 ")
+
+    elif answer == "back" or answer == 'b':
+        answer = input(
+            Fore.GREEN + "You return to the main road."
+                         "Now you can choose to drive straight ahead or turn left. (Type \"forward/f\" to proceed or "
+                         "\"left/l\" to return.) : "
+            + Fore.LIGHTMAGENTA_EX).lower()
+        if answer == "forward" or answer == 'f':
+            chapter_tree()
+        elif answer == "left" or answer == 'l':
+            game_over(Fore.RED + "You died. \U0001F480")
+    else:
+        game_over(Fore.RED + "I'm sorry, I don't understand the input. You Died. \U0001F480")
+
+
 def chapter_tree():
     answer = input(
         Fore.GREEN +
