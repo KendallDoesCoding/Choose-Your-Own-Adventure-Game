@@ -1,3 +1,12 @@
+## [0.13.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.13.0...v0.13.1) (2023-03-14)
+
+
+### Bug Fixes
+
+* grammar issues ([#43](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/43)) ([ff897db](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/ff897db843e11c9cb0977820bd6be477bfac491a)), closes [#35](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/35)
+
+
+
 # [0.13.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.12.0...v0.13.0) (2023-03-13)
 
 
@@ -31,16 +40,6 @@
 ### Bug Fixes
 
 * grammer. (it should be "currently playing" not "current playing". ([2fee6d8](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/2fee6d8c9ec65989ba83e99427e807f3450bad8c))
-
-
-
-## [0.11.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.11.0...v0.11.1) (2023-03-12)
-
-
-### Bug Fixes
-
-* grammer mistakes ([a9b4abb](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/a9b4abb1f20f4d63951c3d640aaa6aa198f69005))
-* TypeError: 'win' is an invalid keyword argument for print() ([a09ea56](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/a09ea561956e9476a452fe491f7295ab902184f4))
 
 
 
