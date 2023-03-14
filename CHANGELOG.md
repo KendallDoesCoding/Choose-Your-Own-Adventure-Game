@@ -1,3 +1,12 @@
+# [0.14.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.13.2...v0.14.0) (2023-03-14)
+
+
+### Features
+
+* add new chapter small grammar and color change([#47](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/47)) ([7abb341](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/7abb341a39b5117d5c0dddd49b9286379ba2c333))
+
+
+
 ## [0.13.2](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.13.1...v0.13.2) (2023-03-14)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * loop music if song/music over and game is still going on (bc99db084ce4e10c3e148bc39a02a79e8f590b85) ([0d67e43](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/0d67e434af96e58f8624cb892e822f357de99150))
-
-
-
-## [0.11.3](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.11.2...v0.11.3) (2023-03-12)
-
-
-### Bug Fixes
-
-* slight grammer - missing "to" ([2c8bc5e](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/2c8bc5efec9e846e12df0eacc7e3460ee0744451))
 
 
 
