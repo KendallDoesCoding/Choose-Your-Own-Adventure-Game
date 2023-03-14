@@ -1,4 +1,5 @@
 # import modules
+import colorama
 import subprocess
 import sys
 import pkg_resources
@@ -20,7 +21,6 @@ if missing:
                           stdout=subprocess.DEVNULL)
 
 # import dependencies
-import colorama
 
 # heading text!
 ImageAddress = 'assets/images/logo.png'
@@ -29,7 +29,7 @@ ImageItself = Image.open(ImageAddress)
 ImageNumpyFormat = np.asarray(ImageItself)
 plt.imshow(ImageNumpyFormat)
 plt.draw()
-plt.pause(1) # pause how many seconds
+plt.pause(1)  # pause how many seconds
 plt.close()
 
 # heading text!
