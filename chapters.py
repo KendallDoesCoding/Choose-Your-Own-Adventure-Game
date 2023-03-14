@@ -205,7 +205,7 @@ def chapter_tree():
             Fore.RED +
             "You ate the fruit but it was poisonous and you died. \U0001F480")
     elif answer == "n":
-        answer = input(
+        answer = input(Fore.GREEN + 
             "You are nearly starving to death. Do you want to eat Pears instead of apples? (y/n) "
             + Fore.LIGHTMAGENTA_EX).lower()
         if answer == "y":
