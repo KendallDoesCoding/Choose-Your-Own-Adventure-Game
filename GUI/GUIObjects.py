@@ -2,7 +2,7 @@ import pygame, os
 pygame.init()
 
 class Button:
-    def __init__(self, x, y, width, height, bg_color=(120,120,120), hover_color=(150,150,150), text="Text", text_color=(0,0,0), font_size=18, center_text = True, border=0, border_color=(0,0,0)):
+    def __init__(self, x, y, width, height, bg_color=(120,120,120), hover_color=(150,150,150), text="Text", text_color=(0,0,0), font_size=18, center_text = True, border=0, border_color=(0,0,0), font=None):
         self.x = x - width / 2
         self.y = y - height / 2
         self.width = width
@@ -13,7 +13,12 @@ class Button:
         self.bg_color = bg_color
         self.hover_color = hover_color
         self.hovering = False
-        self.font = pygame.font.Font(None, font_size)
+        
+        if font is None:
+            self.font = pygame.font.Font(None, font_size)
+        else: 
+            self.font = font
+
         self.text = text
         self.text_color = text_color
         self.font_size = font_size
