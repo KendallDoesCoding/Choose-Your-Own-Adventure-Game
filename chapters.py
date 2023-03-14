@@ -150,7 +150,7 @@ def chapter_stranger():
 
 
 def chapter_lake():
-    answer = input(Fore.GREEN + "You turned left and you come to a lake,"
+    answer = input(Fore.GREEN + "You come to a lake,"
                    "do you want to swim or go back? (swim/back) " +
                    Fore.LIGHTMAGENTA_EX).lower()
     if answer == "swim":
@@ -160,7 +160,7 @@ def chapter_lake():
 
     elif answer == "back":
         answer = input(
-            Fore.GREEN + "You go back to the main road."
+            Fore.GREEN + "You go to the main road."
             "Now you can decide to drive forward or turn left. (forward/left) "
             + Fore.LIGHTMAGENTA_EX).lower()
         if answer == "forward":
@@ -172,7 +172,7 @@ def chapter_lake():
 
 
 def chapter_mountain():
-    answer = input(Fore.GREEN + "\nYou turn right and reached a mountain \U000026F0. \n"
+    answer = input(Fore.GREEN + "\nYou reached a mountain \U000026F0. \n"
                                 "Do you want to climb or go back? (Type \"climb/c\" to proceed or "
                                 "\"back/b\" to return) : " +
                    Fore.LIGHTMAGENTA_EX).lower()
@@ -254,4 +254,4 @@ def game_over(message: str = None, *, end_game=True, win=False):
             exit()
 
 
-my_list = [chapter_bridge, chapter_lake]
+my_list = [chapter_bridge, chapter_lake, chapter_mountain]
