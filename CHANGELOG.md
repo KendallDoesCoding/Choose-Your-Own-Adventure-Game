@@ -1,3 +1,12 @@
+## [0.13.2](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.13.1...v0.13.2) (2023-03-14)
+
+
+### Bug Fixes
+
+* fix gitpod issues ([#44](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/44)) ([cb4ffd8](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/cb4ffd84ec414234f34b931f79acc67b31fd89c9))
+
+
+
 ## [0.13.1](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.13.0...v0.13.1) (2023-03-14)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * slight grammer - missing "to" ([2c8bc5e](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/2c8bc5efec9e846e12df0eacc7e3460ee0744451))
-
-
-
-## [0.11.2](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.11.1...v0.11.2) (2023-03-12)
-
-
-### Bug Fixes
-
-* grammer. (it should be "currently playing" not "current playing". ([2fee6d8](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/2fee6d8c9ec65989ba83e99427e807f3450bad8c))
 
 
 
