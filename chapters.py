@@ -150,7 +150,7 @@ def chapter_stranger():
 
 
 def chapter_lake():
-    answer = input(Fore.GREEN + "You turned left and you come to a lake,"
+    answer = input(Fore.GREEN + "You come to a lake,"
                    "do you want to swim or go back? (swim/back) " +
                    Fore.LIGHTMAGENTA_EX).lower()
     if answer == "swim":
@@ -160,7 +160,7 @@ def chapter_lake():
 
     elif answer == "back":
         answer = input(
-            Fore.GREEN + "You go back to the main road."
+            Fore.GREEN + "You go to the main road."
             "Now you can decide to drive forward or turn left. (forward/left) "
             + Fore.LIGHTMAGENTA_EX).lower()
         if answer == "forward":
@@ -169,6 +169,30 @@ def chapter_lake():
             game_over(Fore.RED + "You died. \U0001F480")
     else:
         game_over(Fore.RED + "Not a valid answer. You die.")
+
+
+def chapter_mountain():
+    answer = input(Fore.GREEN + "\nYou reached a mountain \U000026F0. \n"
+                                "Do you want to climb or go back? (Type \"climb/c\" to proceed or "
+                                "\"back/b\" to return) : " +
+                   Fore.LIGHTMAGENTA_EX).lower()
+    if answer == "climb" or answer == 'c':
+        game_over(
+            Fore.RED +
+            "You climbed to the peak \nbut due to low temperature you frozen. \U0001F976 ")
+
+    elif answer == "back" or answer == 'b':
+        answer = input(
+            Fore.GREEN + "You return to the main road."
+                         "Now you can choose to drive straight ahead or turn left. (Type \"forward/f\" to proceed or "
+                         "\"left/l\" to return.) : "
+            + Fore.LIGHTMAGENTA_EX).lower()
+        if answer == "forward" or answer == 'f':
+            chapter_tree()
+        elif answer == "left" or answer == 'l':
+            game_over(Fore.RED + "You died. \U0001F480")
+    else:
+        game_over(Fore.RED + "I'm sorry, I don't understand the input. You Died. \U0001F480")
 
 
 def chapter_tree():
@@ -181,7 +205,7 @@ def chapter_tree():
             Fore.RED +
             "You ate the fruit but it was poisonous and you died. \U0001F480")
     elif answer == "n":
-        answer = input(
+        answer = input(Fore.GREEN + 
             "You are nearly starving to death. Do you want to eat Pears instead of apples? (y/n) "
             + Fore.LIGHTMAGENTA_EX).lower()
         if answer == "y":
@@ -230,4 +254,4 @@ def game_over(message: str = None, *, end_game=True, win=False):
             exit()
 
 
-my_list = [chapter_bridge, chapter_lake]
+my_list = [chapter_bridge, chapter_lake, chapter_mountain]
