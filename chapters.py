@@ -15,7 +15,7 @@ colorama.init(convert=True)
 def start():
     answer = input(
         Fore.GREEN +
-        "You are on a dirt road. Which way to you want to go left or right? " +
+        "You are on a dirt road. Which way do you want to go left or right? " +
         Fore.LIGHTMAGENTA_EX).lower()
     # if user inputs left then
     if answer == "left":
@@ -36,7 +36,7 @@ def chapter_river():
     if answer == "swim":
         game_over(
             Fore.RED +
-            "You swam across the river and were eaten by an aligator \U0001F480"
+            "You swam across the river and were eaten by an alligator \U0001F480"
         )
     # if user inputs walk then
     elif answer == "walk":
@@ -51,7 +51,7 @@ def chapter_river():
         if answer == "no":
             game_over(
                 Fore.RED +
-                "You were very de-hydrated and died of thirst when you were walking. \U0001F480"
+                "You become de-hydrated and died of thirst when you were walking. \U0001F480"
             )
 
         # if user inputs yes then
@@ -102,7 +102,7 @@ def chapter_river():
 def chapter_bridge():
     answer = input(
         Fore.GREEN + "You come to a bridge, it looks wobbly,"
-        "do you want it or do you want to head back? (cross/back) " +
+        "do you want to cross or do you want to head back? (cross/back) " +
         Fore.LIGHTMAGENTA_EX).lower()
     # if user inputs back then
     if answer == "back":
@@ -113,7 +113,7 @@ def chapter_bridge():
     if answer == "forward":
         game_over(
             Fore.RED +
-            "You drive forward and crash into a tree and die.\U0001F480 ")
+            "You drive forward and crashed into a tree and die.\U0001F480 ")
     # if users inputs left then
     if answer == "left":
         chapter_lake()
@@ -128,7 +128,7 @@ def chapter_bridge():
 def chapter_stranger():
     answer = input(
         Fore.GREEN +
-        "You cross the bridge and meet a stranger, do you talk to them? (y/n) "
+        "You crossed the bridge and meet a stranger, do you want to talk to them? (y/n) "
         + Fore.LIGHTMAGENTA_EX).lower()
     if answer == "n":
         game_over(
@@ -136,7 +136,7 @@ def chapter_stranger():
             "The stranger was not pleased by you and murdered you. \U0001F480")
     elif answer == "y":
         answer = input(Fore.GREEN +
-            "You talk a wizard and they ask you,"
+            "You talk to a wizard and they ask you,"
             "do you want to be a wizard? (y/n) " + Fore.LIGHTMAGENTA_EX).lower()
         if answer == "y":
             game_over(Fore.RED +
