@@ -22,14 +22,21 @@ if missing:
 # import dependencies
 import colorama
 
+<<<<<<< HEAD
 # heading text!
 ImageAddress = 'assets/images/logo.png'
+=======
+
+ImageAddress = 'assets\images/logo.png'
+>>>>>>> c1f7dd05395a1c2a88fa9b8b9113adf43aef80a2
 ImageItself = Image.open(ImageAddress)
 ImageNumpyFormat = np.asarray(ImageItself)
 plt.imshow(ImageNumpyFormat)
 plt.draw()
 plt.pause(1) # pause how many seconds
 plt.close()
+
+# heading text!
 heading = "Choose Your Own Adventure Game!"
 copyright = "\U000000A9 2023, KendallDoesCoding, All Rights Reserved"
 new_str = Fore.BLUE + heading.center(150)

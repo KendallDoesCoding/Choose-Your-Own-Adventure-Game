@@ -27,8 +27,7 @@ Run `main.py`
 
 You can run **Choose Your Own Adventure Game** in Gitpod, a free online dev environment for GitHub.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game])
-
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game)
 <!-- CONTRIBUTING -->
 
 ## 💁‍♂️Contributing to the project
