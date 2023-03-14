@@ -22,7 +22,8 @@ if missing:
 # import dependencies
 import colorama
 
-
+# heading text!
+ImageAddress = 'assets/images/logo.png'
 ImageAddress = 'assets\images/logo.png'
 ImageItself = Image.open(ImageAddress)
 ImageNumpyFormat = np.asarray(ImageItself)
