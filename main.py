@@ -17,14 +17,15 @@ missing = required - installed
 
 if missing:
     python = sys.executable
-    subprocess.check_call([python, "-m", "pip", "install", *missing],
-                          stdout=subprocess.DEVNULL)
+    subprocess.check_call(
+        [python, "-m", "pip", "install", *missing], stdout=subprocess.DEVNULL
+    )
 
 # import dependencies
 
 # heading text!
-ImageAddress = 'assets/images/logo.png'
-ImageAddress = 'assets\images/logo.png'
+ImageAddress = "assets/images/logo.png"
+ImageAddress = "assets\images/logo.png"
 ImageItself = Image.open(ImageAddress)
 ImageNumpyFormat = np.asarray(ImageItself)
 plt.imshow(ImageNumpyFormat)
@@ -47,8 +48,7 @@ def main():
     print(Fore.LIGHTGREEN_EX + "Welcome", name, "to this adventure!")
 
     # do you want to play?
-    answer = input(Fore.YELLOW + "Do you want to play? (y/n) " +
-                   Fore.LIGHTBLUE_EX)
+    answer = input(Fore.YELLOW + "Do you want to play? (y/n) " + Fore.LIGHTBLUE_EX)
     if answer == "y" or answer == "yes":
         # starting the game
         print(Fore.LIGHTGREEN_EX + "Let's play! \U0001F3AE")
@@ -56,8 +56,9 @@ def main():
         print("See you later! \U0001F600")
         exit()
     # do you want music?
-    answer = input(Fore.YELLOW + "Do you want music? \U0001F3B5 (y/n) " +
-                   Fore.LIGHTBLUE_EX)
+    answer = input(
+        Fore.YELLOW + "Do you want music? \U0001F3B5 (y/n) " + Fore.LIGHTBLUE_EX
+    )
     if answer == "y" or answer == "yes":
         music()
         random.choice(my_list)()
