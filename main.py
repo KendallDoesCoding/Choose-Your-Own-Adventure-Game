@@ -1,10 +1,11 @@
 # import modules
-import colorama
 import subprocess
 import sys
-import pkg_resources
-import numpy as np
+
+import colorama
 import matplotlib.pyplot as plt
+import numpy as np
+import pkg_resources
 from PIL import Image
 
 from chapters import *
