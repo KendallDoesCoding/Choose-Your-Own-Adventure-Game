@@ -20,8 +20,7 @@ if missing:
                           stdout=subprocess.DEVNULL)
 
 # import dependencies
-
-# heading text!
+import colorama
 
 
 ImageAddress = 'assets\images/logo.png'
@@ -31,6 +30,8 @@ plt.imshow(ImageNumpyFormat)
 plt.draw()
 plt.pause(1) # pause how many seconds
 plt.close()
+
+# heading text!
 heading = "Choose Your Own Adventure Game!"
 copyright = "\U000000A9 2023, KendallDoesCoding, All Rights Reserved"
 new_str = Fore.BLUE + heading.center(150)
