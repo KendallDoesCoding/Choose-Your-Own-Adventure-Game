@@ -41,7 +41,7 @@ try:
     WINDOW = pygame.display.set_mode((SCR_W, SCR_H))
 except Exception as e:
     RUN_GUI = False
-    print(f"exeption {e}, Running without pygame")
+    print(f"Running without pygame")
 
 pygame.display.set_caption("Choose Your Own Adventure")    
 
@@ -54,8 +54,6 @@ def main():
         GUIInstance.set_params_no_gui()
  
     GUIInstance.start_screen()
-
-    #TODO: Background
     random.choice(my_list)()
 
 
