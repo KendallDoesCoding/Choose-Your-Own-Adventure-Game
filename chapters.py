@@ -4,7 +4,6 @@ import random
 import colorama
 from colorama import Fore
 
-import music.musicTimer as musicTimer  # stop music thread in this file
 from music_player import *
 from GUI.GUI import GUIInstance
 
@@ -88,10 +87,10 @@ def chapter_lake():
         # 1. Back
         if GUIInstance.ask_question("You go back to the main road. Now you can decide to drive forward or turn left.", "Forward", "Left"):
             # 2. Forward
-            chapter_tree()
+            game_over("You died. \U0001F480") # Swapped these two answers around because there is a same question with different answer 
         else:
             # 2. Left
-            game_over("You died. \U0001F480")
+            chapter_tree()
 
 
 def chapter_tree():
@@ -118,10 +117,7 @@ def game_over(message: str = None):
         random.choice(my_list)()
     else:
         # Quit
-        musicTimer.musicTimerObj.cancel()  # stop music thread, make sure to call these 2 lines every time program exits
-        musicTimer.musicTimerObj.join()
-
-        exit()
+        GUIInstance.exit_func()
 
 
 my_list = [chapter_bridge, chapter_lake]

@@ -8,13 +8,12 @@ import pkg_resources
 import numpy as np
 
 from chapters import *
-from music_player import *
+import music_player
 
-from GUI.GUIObjects import Button, TextBox
 from GUI.GUI import GUIInstance
 
 # install missing modules
-required = {"playsound==1.2.2", "colorama==0.4.6"}
+required = {"playsound==1.2.2", "colorama==0.4.6", "pygame==2.1.3.dev8"}
 installed = {pkg.key for pkg in pkg_resources.working_set}
 missing = required - installed
 
@@ -47,8 +46,11 @@ pygame.display.set_caption("Choose Your Own Adventure")
 def main():
     GUIInstance.set_params(SCR_W, SCR_H, WINDOW)
     
+    music_player.music()
     GUIInstance.start_screen()
-    #TODO: Music back
+
+    #TODO: Music toggle
+    #TODO: Background
 
     # welcome to the game
     # name = input(Fore.YELLOW + "Type your name: " + Fore.LIGHTBLUE_EX)
@@ -67,11 +69,11 @@ def main():
     # answer = input(Fore.YELLOW + "Do you want music? \U0001F3B5 (y/n) " +
     #                Fore.LIGHTBLUE_EX)
     # if answer == "y" or answer == "yes":
-    #     music()
     #     random.choice(my_list)(GUI)
     # if answer == "n" or answer == "no":
     #     print(Fore.LIGHTGREEN_EX + "Okay \U0001F600")
     #     random.choice(my_list)(GUI)
+
     random.choice(my_list)()
 
 
