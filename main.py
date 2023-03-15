@@ -22,6 +22,7 @@ if missing:
 # import dependencies
 import os
 os.environ["SDL_VIDEODRIVER"] = "dummy"
+os.environ['SDL_AUDIODRIVER'] = 'dsp'
 
 import pygame
 pygame.init()
