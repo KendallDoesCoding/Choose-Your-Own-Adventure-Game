@@ -264,14 +264,14 @@ class GUI:
             print("See you later! \U0001F600")
             self.exit_func()
         
-        if self.__ask_question_no_gui("Do you want music? \U0001F3B5 (yes / no) ", "yes", "no", color_before=Fore.YELLOW, color_after=Fore.LIGHTBLUE_EX):
-            # Yes
-            music_player.music()
-            random.choice(chapters.my_list)()
-        else:
-            # No
-            print(Fore.LIGHTGREEN_EX + "Okay \U0001F600")
-            random.choice(chapters.my_list)()
+        random.choice(chapters.my_list)()
+        # if self.__ask_question_no_gui("Do you want music? \U0001F3B5 (yes / no) ", "yes", "no", color_before=Fore.YELLOW, color_after=Fore.LIGHTBLUE_EX):
+        #     # Yes
+        #     music_player.music()
+        #     random.choice(chapters.my_list)()
+        # else:
+        #     # No
+        #     print(Fore.LIGHTGREEN_EX + "Okay \U0001F600")
 
 # Use this object when calling any function from GUI class
 GUIInstance = GUI()
