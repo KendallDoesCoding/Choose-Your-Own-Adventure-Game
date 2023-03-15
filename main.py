@@ -20,9 +20,13 @@ if missing:
                           stdout=subprocess.DEVNULL)
 
 # import dependencies
+import os
+os.environ["SDL_VIDEODRIVER"] = "dummy"
+
 import pygame
 pygame.init()
 
+print(pygame.display.list_modes())
 # heading text!
 
 
