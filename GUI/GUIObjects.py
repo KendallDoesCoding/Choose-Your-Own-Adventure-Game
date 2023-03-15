@@ -200,6 +200,28 @@ class Text_box():
             return 0
         
 
+class Toggle:
+    def __init__(self, x: int, y: int, image_on_path: str, image_off_path: str, image_size: tuple, default_state: int=1):
+        self.x = x
+        self.y = y
+        self.w, self.h = image_size
+        self.image_on = pygame.transform.smoothscale(pygame.image.load(image_on_path), image_size)
+        self.image_off = pygame.transform.smoothscale(pygame.image.load(image_off_path), image_size)
+        self.default_state = default_state
+        self.current_state = 1 # 1 on, -1 off
+
+    def check_click(self, mouse_pos: tuple):
+        if mouse_pos[0] >= self.x and mouse_pos[0] <= self.x+self.w and mouse_pos[1] >= self.y and mouse_pos[1] <= self.y+self.h:
+            self.current_state *= -1
+        
+    def draw(self, screen: pygame.Surface):
+        if self.current_state == 1:
+            screen.blit(self.image_on, (self.x, self.y))
+        elif self.current_state == -1:
+            screen.blit(self.image_off, (self.x, self.y))
+
+    def get_state(self) -> int:
+        return self.current_state
 
 # Taken from https://github.com/Mekire/pygame-textbox 
 import string
@@ -227,7 +249,7 @@ class TextBox(object):
                     "font_color" : pg.Color("black"),
                     "outline_color" : pg.Color("black"),
                     "outline_width" : 2,
-                    "active_color" : pg.Color("blue"),
+                    "active_color" : pg.Color("black"),
                     "font" : pg.font.Font(None, self.rect.height+4),
                     "clear_on_enter" : False,
                     "inactive_on_enter" : True,

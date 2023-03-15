@@ -1,5 +1,10 @@
-from GUI.GUIObjects import Button, TextBox
+from GUI.GUIObjects import Button, TextBox, Toggle
 import music.musicTimer as musicTimer  # stop music thread in this file
+import music_player
+import chapters
+
+from colorama import Fore
+import random
 
 import pygame
 pygame.init()
@@ -9,12 +14,12 @@ class GUI:
         self.bg_color = (128, 255, 0)
         self.space_between_text = 60
 
-        # Logo
-        logo_width = 400
 
-        self.logo = pygame.image.load("assets/images/logo.png")
-        aspect_ratio = self.logo.get_size()[1] / self.logo.get_size()[0]
-        self.logo = pygame.transform.smoothscale(self.logo, (logo_width, logo_width * aspect_ratio))
+    def set_params_no_gui(self):
+        self.run_gui = False
+
+    def set_params(self, screen_width: int, screen_height: int, screen: pygame.Surface):
+        self.run_gui = True
 
         # find a font that can draw emojis
         fonts = pygame.sysfont.get_fonts()
@@ -31,13 +36,22 @@ class GUI:
             self.button_font = pygame.font.SysFont(emojis[0], 40)
             self.small_font = pygame.font.SysFont(emojis[0], 30)
 
-
-    def set_params(self, screen_width: int, screen_height: int, screen: pygame.Surface):
         self.button_left = Button(screen_width * .25, screen_height * .9, 200, 60, text="LEFT", font=self.button_font, bg_color=(200, 200, 200), hover_color=(220, 220, 220))
         self.button_right = Button(screen_width * .75, screen_height * .9, 200, 60, text="RIGHT", font=self.button_font, bg_color=(200, 200, 200), hover_color=(220, 220, 220))
         self.buttons_lst = [self.button_left, self.button_right]
         self.screen = screen
         self.screen_width, self.screen_height = self.screen.get_size()
+
+        # Logo
+        logo_width = 400
+
+        self.logo = pygame.image.load("assets/images/logo.png")
+        aspect_ratio = self.logo.get_size()[1] / self.logo.get_size()[0]
+        self.logo = pygame.transform.smoothscale(self.logo, (logo_width, logo_width * aspect_ratio))
+
+        # BG
+        bg_height = self.screen_height
+        self.background = pygame.transform.smoothscale(pygame.image.load("assets/images/landscape.png"), (bg_height* 1.778, bg_height))
         
 
     # private function
@@ -100,7 +114,9 @@ class GUI:
     def ask_question(self, question: str, left_btn_txt: str, right_btn_txt: str) -> bool:
         """Ask a question with two answers.\n
             RETURNS: If pressed left_button: Return True. If pressed right_button: Return False"""
-        
+        if not self.run_gui:
+            return self.__ask_question_no_gui(question + f" ({left_btn_txt} / {right_btn_txt}) ", left_btn_txt, right_btn_txt, color_before=Fore.GREEN, color_after=Fore.LIGHTMAGENTA_EX)
+            
         # Initalize texts and buttons
         text_renders = self.__seperate_text_to_rows(question, self.screen_width - 50, self.font)
         self.button_left.text = left_btn_txt
@@ -108,7 +124,7 @@ class GUI:
         
         # Basic pygame window loop
         while(True):
-            self.screen.fill(self.bg_color)
+            self.screen.blit(self.background, (0, 0))
 
             # Update buttons
             for btn in self.buttons_lst:
@@ -141,7 +157,7 @@ class GUI:
         enter_text = self.small_font.render("Press Enter to continue", True, (0,0,0))
 
         while(True):
-            self.screen.fill(self.bg_color)
+            self.screen.blit(self.background, (0, 0))
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -167,25 +183,40 @@ class GUI:
         exit()
 
     def start_screen(self):
+        if not self.run_gui: 
+            self.__start_screen_no_gui()
+            return
+        
         text_box_w = 300
         text_box_h = 100
         name_text_box = TextBox((self.screen_width / 2 - text_box_w / 2, 
                                 self.screen_height * .7 - text_box_h / 2, text_box_w, text_box_h), font=self.font)    
         
+        music_toggle = Toggle(0, 0, "assets/images/MusicOn.png", "assets/images/MusicOff.png", (128, 128))
+
         text = self.font.render("Hi! What is you name?", True, (0,0,0))
 
         got_name = False
 
         while (not got_name):
-            self.screen.fill(self.bg_color)
+            self.screen.blit(self.background, (0, 0))
             self.screen.blit(self.logo, (self.screen_width / 2 - self.logo.get_size()[0] / 2, 
-                                         self.screen_height * .3 - self.logo.get_size()[1] / 2))
+                                        self.screen_height * .3 - self.logo.get_size()[1] / 2))
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.exit_func()
                 
                 name_text_box.get_event(event)
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    if pygame.mouse.get_pressed()[0]:
+                        music_toggle.check_click(pygame.mouse.get_pos())
+
+                        if music_toggle.get_state() == 1:
+                            pygame.mixer.unpause()
+                        else:
+                            pygame.mixer.pause()
+
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_RETURN:
                         player_name = "".join(name_text_box.buffer)
@@ -193,11 +224,54 @@ class GUI:
             
             self.screen.blit(text, (self.screen_width / 2 - text.get_size()[0] / 2, 
                                     self.screen_height * .85))
+            music_toggle.draw(self.screen)
+
             name_text_box.update()
             name_text_box.draw(self.screen)
             pygame.display.update()
 
         self.text_until_enter(f"Welcome {player_name} to this adventure!")
+            
+    def __ask_question_no_gui(self, question: str, first: str, second: str, color_before: Fore=None, color_after: Fore=None) -> bool:
+        while(True):
+            q = ""
+
+            if color_before:
+                q += color_before
+
+            q += question
+
+            if color_after:
+                q += color_after
+
+            answer = input(q)
+            if answer.lower() == first.lower():
+                return True
+            if answer.lower() == second.lower():
+                return False
+            
+            print("Invalid answer, try again.")
+
+    def __start_screen_no_gui(self):
+        name = input(Fore.YELLOW + "Type your name: " + Fore.LIGHTBLUE_EX)
+        print(Fore.LIGHTGREEN_EX + "Welcome", name, "to this adventure!")
+
+        if self.__ask_question_no_gui("Do you want to play? (yes / no) ", "yes", "no", color_before=Fore.YELLOW, color_after=Fore.LIGHTBLUE_EX):
+            # Yes
+            print(Fore.LIGHTGREEN_EX + "Let's play! \U0001F3AE")
+        else:
+            # No
+            print("See you later! \U0001F600")
+            self.exit_func()
+        
+        if self.__ask_question_no_gui("Do you want music? \U0001F3B5 (yes / no) ", "yes", "no", color_before=Fore.YELLOW, color_after=Fore.LIGHTBLUE_EX):
+            # Yes
+            music_player.music()
+            random.choice(chapters.my_list)()
+        else:
+            # No
+            print(Fore.LIGHTGREEN_EX + "Okay \U0001F600")
+            random.choice(chapters.my_list)()
 
 # Use this object when calling any function from GUI class
 GUIInstance = GUI()

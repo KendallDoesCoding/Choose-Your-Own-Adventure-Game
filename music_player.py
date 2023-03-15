@@ -6,6 +6,7 @@ import colorama
 from colorama import Fore
 
 import music.musicTimer as musicTimer
+from GUI.GUI import GUIInstance
 
 # Initialize songs
 
@@ -172,8 +173,9 @@ def music():
     pygame.init()
     pygame.mixer.init()
 
-    start_song()
-    print(Fore.BLUE + "Music has started")
+    start_song(print_song_name = not GUIInstance.run_gui)
+    if not GUIInstance.run_gui:
+        print(Fore.BLUE + "Music has started")
 
 
 # Another function to not print all the stuff when starting new song

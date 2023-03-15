@@ -31,7 +31,7 @@ def chapter_river():
                 GUIInstance.text_until_enter("You drank 5 liters of water and now you feel refreshed.")
                 if GUIInstance.ask_question("Do you want to walk further or go back home?", "Further", "Home"):
                     # 4. Further
-                    game_over("You walked 100 more miles and you WIN the game! \U0001f3c6")
+                    game_over("You walked 100 more miles and you WIN the game! \U0001f3c6", win=True)
                 else:
                     # 4. Home
                     game_over("A car crashed you and you were rushed to hospital. Although, it was too late by the time you reached the hospital, and you had already died. \U0001F480")
@@ -70,7 +70,7 @@ def chapter_stranger():
         # 1. Yes
         if GUIInstance.ask_question("You talk a wizard and he asks you, do you want to be a wizard?", "Yes", "No"):
             # 2. Yes
-            game_over("You are a wizard and you WIN the game! \U0001f3c6")
+            game_over("You bacome a wizard and WIN the game! \U0001f3c6", win=True)
         else:
             # 2. No
             game_over("The stranger was not pleased by you and murdered you. \U0001F480")
@@ -104,12 +104,20 @@ def chapter_tree():
             game_over("You ate the pears but they were poisonous and you died. \U0001F480")
         else: 
             # 2. No
-            game_over("You were so hungry that you were nearly going to die in a few seconds, but a lovely gentleman gave you some food and you WIN the game! \U0001f3c6")
+            game_over("You were super hungry and nearly died, but a lovely gentleman gave you some food and you WIN the game! \U0001f3c6", win=True)
 
 
-def game_over(message: str = None):
+def game_over(message: str = None, *, win=False):
     "Shows Game over message"
-    if message:
+    if not GUIInstance.run_gui:
+        # No gui
+        if win:
+            print(Fore.YELLOW + message)
+        else:
+            print(Fore.RED + message)
+
+    elif message:
+        # Gui and message
         GUIInstance.text_until_enter(message)
     
     if GUIInstance.ask_question("Thanks for playing!", "Play Again", "Quit"):
