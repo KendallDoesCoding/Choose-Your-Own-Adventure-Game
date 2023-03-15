@@ -2,10 +2,7 @@
 import subprocess
 import sys
 
-import time
-
 import pkg_resources
-import numpy as np
 
 from chapters import *
 import music_player
