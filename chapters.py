@@ -4,254 +4,147 @@ import random
 import colorama
 from colorama import Fore
 
-import music.musicTimer as musicTimer  # stop music thread in this file
 from music_player import *
+from GUI.GUI import GUIInstance
 
 colorama.init(convert=True)
 
 # start the game
 
-
+# NOT CALLED ANYWHERE
 def start():
-    answer = input(
-        Fore.GREEN +
-        "You are on a dirt road. Which way do you want to go left or right? " +
-        Fore.LIGHTMAGENTA_EX).lower()
-    # if user inputs left then
-    if answer == "left":
+    if GUIInstance.ask_question("You are on a dirt road. Which way do you want to go left or right?", "Left", "Right"):
         random.choice(my_list)()
-
-    # if user inputs right then
-    if answer == "right":
+    else:
         random.choice(my_list)()
 
 
 def chapter_river():
-    answer = input(
-        Fore.GREEN +
-        "You come to a river, you can walk around it or swim across."
-        "Type walk to walk around & swim to swim across. " +
-        Fore.LIGHTMAGENTA_EX).lower()
-    # if user inputs swim then
-    if answer == "swim":
-        game_over(
-            Fore.RED +
-            "You swam across the river and were eaten by an alligator \U0001F480"
-        )
-    # if user inputs walk then
-    elif answer == "walk":
-        # q2
-        answer = input(
-            Fore.GREEN +
-            "You walked for many miles, ran out of water and remembered "
-            "that there was a shop far away (10 miles/16kms) which supplies water."
-            "Do you want to go there (yes/no)? " +
-            Fore.LIGHTMAGENTA_EX).lower()
-        # if user inputs no then
-        if answer == "no":
-            game_over(
-                Fore.RED +
-                "You become de-hydrated and died of thirst when you were walking. \U0001F480"
-            )
+    if GUIInstance.ask_question("You come to a river, you can walk around it or swim across.", "Walk", "Swim"):
+        # 1. Walk
+        if GUIInstance.ask_question("You walked for many miles, ran out of water and remembered that there was a shop far away which supplies water. Do you want to go there?", "Yes", "No"):
+            # 2. Yes
+            if GUIInstance.ask_question("You went 10 miles walking and bought 10 liters of drinking water. Do you want to drink the water?", "Yes", "No"):
+                # 3. Yes
+                GUIInstance.text_until_enter("You drank 5 liters of water and now you feel refreshed.")
+                if GUIInstance.ask_question("Do you want to walk further or go back home?", "Further", "Home"):
+                    # 4. Further
+                    game_over("You walked 100 more miles and you WIN the game! \U0001f3c6", win=True)
+                else:
+                    # 4. Home
+                    game_over("A car crashed you and you were rushed to hospital. Although, it was too late by the time you reached the hospital, and you had already died. \U0001F480")
 
-        # if user inputs yes then
-        elif answer == "yes":
-            print(
-                Fore.GREEN +
-                "You went 10 miles walking and bought 10 liters of drinking water. "
-            )
-            # q3
-            answer = input(
-                Fore.GREEN +
-                "You are thirsty, do you want to drink some water (yes/no)? " +
-                Fore.LIGHTMAGENTA_EX).lower()
-        # if user inputs yes then
-        if answer == "yes":
-            print(Fore.GREEN +
-                  "You drank 5 liters of water and now you feel refreshed.")
+            else:
+                # 3. No
+                game_over("You died of thirst.\U0001F480")
 
-        # if user inputs no then
-        elif answer == "no":
-            game_over(Fore.RED + "You died of thirst.\U0001F480 ")
         else:
-            print(Fore.RED + "Not a valid answer. You die. \U0001F480")
-            random.choice(my_list)()
-        # q4
-        answer = input(
-            Fore.GREEN +
-            "You drank 5 liters of water and now you feel refreshed. Do you want to walk further or go back home? (further/home) "
-            + Fore.LIGHTMAGENTA_EX).lower()
-        # if user inputs further then
-        if answer == "further":
-            game_over(
-                Fore.RED +
-                "You walked 100 more miles and you WIN the game! \U0001f3c6",
-                win=True,
-            )
-        # if user inputs home then
-        if answer == "home":
-            game_over(
-                Fore.RED +
-                "A car crashed you and you were rushed to hospital. Although, it was too late by the time you reached the hospital, and you had already died. \U0001F480"
-            )
-        else:
-            print(Fore.RED + "Not a valid answer. You die. \U0001F480")
-            game_over()
+            # 2. No
+            game_over("You were very de-hydrated and died of thirst when you were walking. \U0001F480")
+
+    else:
+        # 1. Swim
+        game_over("You swam across the river and were eaten by an aligator \U0001F480")
+
 
 
 def chapter_bridge():
-    answer = input(
-        Fore.GREEN + "You come to a bridge, it looks wobbly,"
-        "do you want to cross or do you want to head back? (cross/back) " +
-        Fore.LIGHTMAGENTA_EX).lower()
-    # if user inputs back then
-    if answer == "back":
-        answer = input(
-            Fore.GREEN + "You go back to the main road."
-            "Now you can decide to drive forward or turn left. (forward/left) "
-            + Fore.LIGHTMAGENTA_EX).lower()
-    if answer == "forward":
-        game_over(
-            Fore.RED +
-            "You drive forward and crashed into a tree and die.\U0001F480 ")
-    # if users inputs left then
-    if answer == "left":
-        chapter_lake()
-    # if user inputs cross then
-    elif answer == "cross":
+    if GUIInstance.ask_question("You come to a bridge, it looks wobbly. Do you want to cross it or do you want to head back?", "Cross", "Back"):
+        # 1. Cross
         chapter_stranger()
+    
     else:
-        print(Fore.RED + "Not a valid answer. You die. \U0001F480 ")
-        game_over()
+        # 1. Back
+        if GUIInstance.ask_question("You go back to the main road. Now you can decide to drive forward or turn left.", "Forward", "Left"):
+            # 2. Forward
+            game_over("You drive forward and crash into a tree and die.\U0001F480")
+        else:
+            # 2. Left
+            chapter_lake()
 
 
 def chapter_stranger():
-    answer = input(
-        Fore.GREEN +
-        "You crossed the bridge and meet a stranger, do you want to talk to them? (y/n) "
-        + Fore.LIGHTMAGENTA_EX).lower()
-    if answer == "n":
-        game_over(
-            Fore.RED +
-            "The stranger was not pleased by you and murdered you. \U0001F480")
-    elif answer == "y":
-        answer = input(Fore.GREEN +
-            "You talk to a wizard and they ask you,"
-            "do you want to be a wizard? (y/n) " + Fore.LIGHTMAGENTA_EX).lower()
-        if answer == "y":
-            game_over(Fore.RED +
-                      "You are a wizard and you WIN the game! \U0001f3c6",
-                      win=True)
-        elif answer == "n":
-            game_over(
-                Fore.RED +
-                "The stranger was not pleased by you and murdered you. \U0001F480"
-            )
+    if GUIInstance.ask_question("You cross the bridge and meet a stranger, do you talk to them?", "Yes", "No"):
+        # 1. Yes
+        if GUIInstance.ask_question("You talk a wizard and he asks you, do you want to be a wizard?", "Yes", "No"):
+            # 2. Yes
+            game_over("You bacome a wizard and WIN the game! \U0001f3c6", win=True)
+        else:
+            # 2. No
+            game_over("The stranger was not pleased by you and murdered you. \U0001F480")
+    else:
+        # 1. No
+        game_over("The stranger was not pleased by you and murdered you. \U0001F480")
+        
+        
+def chapter_mountain():
+    if GUIInstance.ask_question("You reached a mountain. Do you want to climb it?", "Yes", "No"):
+        # 1. Yes
+        if GUIInstance.ask_question("You start climbing the mountain. You see a rope bridge ahead. Do you want to cross it?", "Yes", "No"):
+            # 2. Yes
+            game_over("You walk on the bridge, but suddenly it collapses. You fall to the ground and die \U0001F480")
+        else:
+            # 2. No
+            if GUIInstance.ask_question("Do you want to continue climbing or go back down?", "Climb", "Back"):
+                # 3. Climb
+                game_over("You climb the mountain for many days, and you finally reach the top. You WIN the game! \U0001f3c6", win=True)
+            else:
+                # 3. Back
+                GUIInstance.text_until_enter("You climb down safely.")
+                random.choice(my_list)()
+
+    else:
+        # 1. No
+        random.choice(my_list)()
 
 
 def chapter_lake():
-    answer = input(Fore.GREEN + "You come to a lake,"
-                   "do you want to swim or go back? (swim/back) " +
-                   Fore.LIGHTMAGENTA_EX).lower()
-    if answer == "swim":
-        game_over(
-            Fore.RED +
-            "You swam across the lake and were eaten by a shark. \U0001F480 ")
-
-    elif answer == "back":
-        answer = input(
-            Fore.GREEN + "You go to the main road."
-            "Now you can decide to drive forward or turn left. (forward/left) "
-            + Fore.LIGHTMAGENTA_EX).lower()
-        if answer == "forward":
-            chapter_tree()
-        elif answer == "left":
-            game_over(Fore.RED + "You died. \U0001F480")
+    if GUIInstance.ask_question("You turned left and you come to a lake, do you want to swim or go back?", "Swim", "Back"):
+        # 1. Swim
+        game_over("You swam across the lake and were eaten by a shark. \U0001F480 ")
     else:
-        game_over(Fore.RED + "Not a valid answer. You die.")
-
-
-def chapter_mountain():
-    answer = input(Fore.GREEN + "\nYou reached a mountain \U000026F0. \n"
-                                "Do you want to climb or go back? (Type \"climb/c\" to proceed or "
-                                "\"back/b\" to return) : " +
-                   Fore.LIGHTMAGENTA_EX).lower()
-    if answer == "climb" or answer == 'c':
-        game_over(
-            Fore.RED +
-            "You climbed to the peak \nbut due to low temperature you frozen. \U0001F976 ")
-
-    elif answer == "back" or answer == 'b':
-        answer = input(
-            Fore.GREEN + "You return to the main road."
-                         "Now you can choose to drive straight ahead or turn left. (Type \"forward/f\" to proceed or "
-                         "\"left/l\" to return.) : "
-            + Fore.LIGHTMAGENTA_EX).lower()
-        if answer == "forward" or answer == 'f':
+        # 1. Back
+        if GUIInstance.ask_question("You go back to the main road. Now you can decide to drive forward or turn left.", "Forward", "Left"):
+            # 2. Forward
+            game_over("You died. \U0001F480") # Swapped these two answers around because there is a same question with different answer 
+        else:
+            # 2. Left
             chapter_tree()
-        elif answer == "left" or answer == 'l':
-            game_over(Fore.RED + "You died. \U0001F480")
-    else:
-        game_over(Fore.RED + "I'm sorry, I don't understand the input. You Died. \U0001F480")
 
 
 def chapter_tree():
-    answer = input(
-        Fore.GREEN +
-        "You are very hungry and you see a tree with apples, do you want to eat the fruit? (y/n) "
-        + Fore.LIGHTMAGENTA_EX)
-    if answer == "y":
-        game_over(
-            Fore.RED +
-            "You ate the fruit but it was poisonous and you died. \U0001F480")
-    elif answer == "n":
-        answer = input(Fore.GREEN + 
-            "You are nearly starving to death. Do you want to eat Pears instead of apples? (y/n) "
-            + Fore.LIGHTMAGENTA_EX).lower()
-        if answer == "y":
-            game_over(
-                Fore.RED +
-                "You ate the pears but they were poisonous and you died. \U0001F480"
-            )
-        elif answer == "n":
-            game_over(
-                Fore.RED +
-                "You were so hungry that you were nearly going to die in a few seconds, but a lovely gentleman gave you some food and you WIN the game! \U0001f3c6",
-                win=True,
-            )
-
-        else:
-            print(Fore.RED + "Not a valid answer. You die. \U0001F480")
-            game_over()
-
-
-def game_over(message: str = None, *, end_game=True, win=False):
-    "Prints Game over message"
-    if message:
-        print(message)
-    if win:
-        print("CONGRATULATIONS on winning the game!")
+    if GUIInstance.ask_question("You are very hungry and you see a tree with apples, do you want to eat the fruit?", "Yes", "No"):
+        # 1. Yes
+        game_over("You ate the fruit but it was poisonous and you died. \U0001F480")
     else:
-        print(Fore.BLUE + "Game over")
-        print(Fore.LIGHTYELLOW_EX + "Thanks for playing!")
-    if game_over:
-        # Play Again
-        answer = input(Fore.YELLOW + "Do you want to play again? (y/n) " +
-                       Fore.LIGHTBLUE_EX)
-        if answer == "y" or answer == "yes":
-            random.choice(my_list)()
-        if music == "on":
-            print(Fore.GREEN + "Music is on")
-        elif music == "off":
-            print(Fore.RED + "Music is off")
-            music.music()
+        # 1. No
+        if GUIInstance.ask_question("You are nearly starving to death. Do you want to eat Pears instead of apples?", "Yes", "No"):
+            # 2. Yes
+            game_over("You ate the pears but they were poisonous and you died. \U0001F480")
+        else: 
+            # 2. No
+            game_over("You were super hungry and nearly died, but a lovely gentleman gave you some food and you WIN the game! \U0001f3c6", win=True)
+
+
+def game_over(message: str = None, *, win=False):
+    "Shows Game over message"
+    if not GUIInstance.run_gui:
+        # No gui
+        if win:
+            print(Fore.YELLOW + message)
         else:
-            print(Fore.RED + "Thanks for playing!")
-            musicTimer.musicTimerObj.cancel()  # stop music thread
-            # make sure to call these 2 lines every time program exits
-            musicTimer.musicTimerObj.join()
+            print(Fore.RED + message)
 
-            exit()
+    elif message:
+        # Gui and message
+        GUIInstance.text_until_enter(message)
+    
+    if GUIInstance.ask_question("Thanks for playing!", "Play Again", "Quit"):
+        # Play again
+        random.choice(my_list)()
+    else:
+        # Quit
+        GUIInstance.exit_func()
 
 
-my_list = [chapter_bridge, chapter_lake, chapter_mountain]
+my_list = [chapter_bridge, chapter_lake, chapter_mountain, chapter_river]
