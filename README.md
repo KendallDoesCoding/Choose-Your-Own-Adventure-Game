@@ -61,6 +61,11 @@ Further, the following songs are used (copyright free, no license required):
 - Snake On The Beach by Nico Staf
 - A Parisian Cafe by Aaron Kenny
 
+### Other Credits
+
+- Background Image (copyright free) by PWL https://opengameart.org/content/seamless-hd-landscape-in-parts
+- Code for Text box from https://github.com/Mekire/pygame-textbox
+
 # Example
 
 https://user-images.githubusercontent.com/84712013/224546811-9e0fdfe4-4f2f-4e6e-847f-1ff43da9dfc5.mp4
