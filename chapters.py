@@ -11,7 +11,7 @@ colorama.init(convert=True)
 
 # start the game
 
-# Not called anywhere
+# NOT CALLED ANYWHERE
 def start():
     if GUIInstance.ask_question("You are on a dirt road. Which way do you want to go left or right?", "Left", "Right"):
         random.choice(my_list)()
@@ -19,12 +19,10 @@ def start():
         random.choice(my_list)()
 
 
-# Not called anywhere
-
 def chapter_river():
     if GUIInstance.ask_question("You come to a river, you can walk around it or swim across.", "Walk", "Swim"):
         # 1. Walk
-        if GUIInstance.ask_question("You walked for many miles, ran out of water and remembered that there was a shop far away (10 miles/16kms) which supplies water. Do you want to go there?", "Yes", "No"):
+        if GUIInstance.ask_question("You walked for many miles, ran out of water and remembered that there was a shop far away which supplies water. Do you want to go there?", "Yes", "No"):
             # 2. Yes
             if GUIInstance.ask_question("You went 10 miles walking and bought 10 liters of drinking water. Do you want to drink the water?", "Yes", "No"):
                 # 3. Yes
@@ -80,27 +78,25 @@ def chapter_stranger():
         
         
 def chapter_mountain():
-    answer = input(Fore.GREEN + "\nYou reached a mountain \U000026F0. \n"
-                                "Do you want to climb or go back? (Type \"climb/c\" to proceed or "
-                                "\"back/b\" to return) : " +
-                   Fore.LIGHTMAGENTA_EX).lower()
-    if answer == "climb" or answer == 'c':
-        game_over(
-            Fore.RED +
-            "You climbed to the peak \nbut due to low temperature you frozen. \U0001F976 ")
+    if GUIInstance.ask_question("You reached a mountain. Do you want to climb it?", "Yes", "No"):
+        # 1. Yes
+        if GUIInstance.ask_question("You start climbing the mountain. You see a rope bridge ahead. Do you want to cross it?", "Yes", "No"):
+            # 2. Yes
+            game_over("You walk on the bridge, but suddenly it collapses. You fall to the ground and die \U0001F480")
+        else:
+            # 2. No
+            if GUIInstance.ask_question("Do you want to continue climbing or go back down?", "Climb", "Back"):
+                # 3. Climb
+                game_over("You climb the mountain for many days, and you finally reach the top. You WIN the game! \U0001f3c6", win=True)
+            else:
+                # 3. Back
+                GUIInstance.text_until_enter("You climb down safely.")
+                random.choice(my_list)()
 
-    elif answer == "back" or answer == 'b':
-        answer = input(
-            Fore.GREEN + "You return to the main road."
-                         "Now you can choose to drive straight ahead or turn left. (Type \"forward/f\" to proceed or "
-                         "\"left/l\" to return.) : "
-            + Fore.LIGHTMAGENTA_EX).lower()
-        if answer == "forward" or answer == 'f':
-            chapter_tree()
-        elif answer == "left" or answer == 'l':
-            game_over(Fore.RED + "You died. \U0001F480")
     else:
-        game_over(Fore.RED + "I'm sorry, I don't understand the input. You Died. \U0001F480")
+        # 1. No
+        random.choice(my_list)()
+
 
 def chapter_lake():
     if GUIInstance.ask_question("You turned left and you come to a lake, do you want to swim or go back?", "Swim", "Back"):
@@ -151,4 +147,4 @@ def game_over(message: str = None, *, win=False):
         GUIInstance.exit_func()
 
 
-my_list = [chapter_bridge, chapter_lake, chapter_mountain]
+my_list = [chapter_bridge, chapter_lake, chapter_mountain, chapter_river]
