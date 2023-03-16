@@ -1,3 +1,12 @@
+# [0.15.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.14.0...v0.15.0) (2023-03-16)
+
+
+### Features
+
+* create GUI, new chapter system... If computer/VM not compatible with GUI, then run text version in terminal. ([e1249a7](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/e1249a798b79368b1cb023c7642f81fe65779bf1))
+
+
+
 # [0.14.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.13.2...v0.14.0) (2023-03-14)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * create game logo ([f593016](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/f59301628feb6e75fafecfb1c2af328637389283))
-
-
-
-# [0.12.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.11.3...v0.12.0) (2023-03-12)
-
-
-### Features
-
-* loop music if song/music over and game is still going on (bc99db084ce4e10c3e148bc39a02a79e8f590b85) ([0d67e43](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/0d67e434af96e58f8624cb892e822f357de99150))
 
 
 
