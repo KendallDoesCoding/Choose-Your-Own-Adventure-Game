@@ -1,6 +1,5 @@
 from GUI.GUIObjects import Button, TextBox, Toggle
 import music.musicTimer as musicTimer  # stop music thread in this file
-import music_player
 import chapters
 
 from colorama import Fore
@@ -13,6 +12,7 @@ class GUI:
     def __init__(self):
         self.bg_color = (128, 255, 0)
         self.space_between_text = 60
+        self.music_toggle_size = 88
 
 
     def set_params_no_gui(self):
@@ -192,7 +192,7 @@ class GUI:
         name_text_box = TextBox((self.screen_width / 2 - text_box_w / 2, 
                                 self.screen_height * .7 - text_box_h / 2, text_box_w, text_box_h), font=self.font)    
         
-        music_toggle = Toggle(0, 0, "assets/images/MusicOn.png", "assets/images/MusicOff.png", (128, 128))
+        music_toggle = Toggle(self.screen_width - self.music_toggle_size - 20, 20, "assets/images/MusicOn.png", "assets/images/MusicOff.png", (self.music_toggle_size, self.music_toggle_size))
 
         text = self.font.render("Hi! What is you name?", True, (0,0,0))
 

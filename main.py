@@ -2,6 +2,14 @@
 import subprocess
 import sys
 
+# Set the taskbar icon to same as pygame window icon
+import ctypes
+myappid = 'KendallDoesCoding.ChooseYourAdventureGame.1.0' # arbitrary string
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+
+import os
+os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
+
 import pkg_resources
 
 from chapters import *
@@ -26,11 +34,11 @@ pygame.init()
 
 # heading text!
 
-heading = "Choose Your Own Adventure Game!"
+#heading = "Choose Your Own Adventure Game!"
 copyright = "\U000000A9 2023, KendallDoesCoding, All Rights Reserved"
-new_str = Fore.BLUE + heading.center(150)
+#new_str = Fore.BLUE + heading.center(150)
 new_str2 = Fore.BLUE + copyright.center(150)
-print(new_str)
+#print(new_str)
 print(new_str2)
 
 SCR_W = 800
@@ -43,7 +51,8 @@ except Exception as e:
     RUN_GUI = False
     print(f"Running without pygame")
 
-pygame.display.set_caption("Choose Your Own Adventure")    
+pygame.display.set_caption("Choose Your Own Adventure") 
+pygame.display.set_icon(pygame.image.load("assets/images/logo.png"))    # SET PYGAME WINDOW ICON
 
 
 def main():
