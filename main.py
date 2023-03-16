@@ -34,11 +34,11 @@ pygame.init()
 
 # heading text!
 
-#heading = "Choose Your Own Adventure Game!"
+heading = "Choose Your Own Adventure Game!"
 copyright = "\U000000A9 2023, KendallDoesCoding, All Rights Reserved"
-#new_str = Fore.BLUE + heading.center(150)
+new_str = Fore.BLUE + heading.center(150)
 new_str2 = Fore.BLUE + copyright.center(150)
-#print(new_str)
+print(new_str)
 print(new_str2)
 
 SCR_W = 800
