@@ -13,7 +13,7 @@ colorama.init(convert=True)
 
 # Not called anywhere
 def start():
-    if GUIInstance.ask_question("You are on a dirt road. Which way to you want to go left or right?", "Left", "Right"):
+    if GUIInstance.ask_question("You are on a dirt road. Which way do you want to go left or right?", "Left", "Right"):
         random.choice(my_list)()
     else:
         random.choice(my_list)()
@@ -77,7 +77,30 @@ def chapter_stranger():
     else:
         # 1. No
         game_over("The stranger was not pleased by you and murdered you. \U0001F480")
+        
+        
+def chapter_mountain():
+    answer = input(Fore.GREEN + "\nYou reached a mountain \U000026F0. \n"
+                                "Do you want to climb or go back? (Type \"climb/c\" to proceed or "
+                                "\"back/b\" to return) : " +
+                   Fore.LIGHTMAGENTA_EX).lower()
+    if answer == "climb" or answer == 'c':
+        game_over(
+            Fore.RED +
+            "You climbed to the peak \nbut due to low temperature you frozen. \U0001F976 ")
 
+    elif answer == "back" or answer == 'b':
+        answer = input(
+            Fore.GREEN + "You return to the main road."
+                         "Now you can choose to drive straight ahead or turn left. (Type \"forward/f\" to proceed or "
+                         "\"left/l\" to return.) : "
+            + Fore.LIGHTMAGENTA_EX).lower()
+        if answer == "forward" or answer == 'f':
+            chapter_tree()
+        elif answer == "left" or answer == 'l':
+            game_over(Fore.RED + "You died. \U0001F480")
+    else:
+        game_over(Fore.RED + "I'm sorry, I don't understand the input. You Died. \U0001F480")
 
 def chapter_lake():
     if GUIInstance.ask_question("You turned left and you come to a lake, do you want to swim or go back?", "Swim", "Back"):
@@ -128,4 +151,4 @@ def game_over(message: str = None, *, win=False):
         GUIInstance.exit_func()
 
 
-my_list = [chapter_bridge, chapter_lake]
+my_list = [chapter_bridge, chapter_lake, chapter_mountain]
