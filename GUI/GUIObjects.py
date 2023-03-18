@@ -225,7 +225,6 @@ class Toggle:
 
 # Taken from https://github.com/Mekire/pygame-textbox 
 import string
-import pygame as pg
 
 ACCEPTED = string.ascii_letters+string.digits+string.punctuation+" "
 
