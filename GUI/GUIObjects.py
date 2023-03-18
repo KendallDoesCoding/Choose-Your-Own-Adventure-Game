@@ -1,4 +1,4 @@
-import pygame, os
+import pygame
 pygame.init()
 
 class Button:

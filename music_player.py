@@ -1,8 +1,6 @@
 import os
 import random
 import threading
-
-import colorama
 from colorama import Fore
 
 import music.musicTimer as musicTimer
