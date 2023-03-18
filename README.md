@@ -13,7 +13,6 @@ Currently, there are **3** possible winning solutions. In the future versions, t
 - Python 3.0
 - Colorama (Pip module)
 
-
 # Steps to Run
 
 Run `main.py`
@@ -23,9 +22,11 @@ Run `main.py`
 You can run **Choose Your Own Adventure Game** in Gitpod, a free online dev environment for GitHub.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game)
+
 <!-- CONTRIBUTING -->
 
 To run in Gitpod:
+
 - Please ensure you first open up the terminal and paste.
 
 ```
@@ -60,6 +61,8 @@ Further, the following songs are used (copyright free, no license required):
 
 - Snake On The Beach by Nico Staf
 - A Parisian Cafe by Aaron Kenny
+- Tropical Fever by Luke Bergs & LiQWYD
+- Happy African Village by John Bartmann
 
 ### Other Credits
 
@@ -67,12 +70,12 @@ Further, the following songs are used (copyright free, no license required):
 - Code for Text box from https://github.com/Mekire/pygame-textbox
 
 # Contributors
+
 Thanks to all our contributors for their active support and participation!
 
-<a href = "https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game">
-  <img src = "https://contrib.rocks/image?repo=KendallDoesCoding/Choose-Your-Own-Adventure-Game"/>
-</a>
-
+`<a href = "https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game">`
+  `<img src = "https://contrib.rocks/image?repo=KendallDoesCoding/Choose-Your-Own-Adventure-Game"/>`
+`</a>`
 
 # Example
 
