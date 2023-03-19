@@ -1,6 +1,7 @@
 from GUI.GUIObjects import Button, TextBox, Toggle
 import music.musicTimer as musicTimer  # stop music thread in this file
 import chapters
+import sys
 
 from colorama import Fore
 import random
@@ -180,7 +181,7 @@ class GUI:
     def exit_func(self):
         musicTimer.musicTimerObj.cancel()  # stop music thread, make sure to call these 2 lines every time program exits
         musicTimer.musicTimerObj.join()
-        exit()
+        sys.exit()
 
     def start_screen(self):
         if not self.run_gui: 
