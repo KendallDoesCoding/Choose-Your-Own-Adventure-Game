@@ -181,7 +181,7 @@ class GUI:
     def exit_func(self):
         musicTimer.musicTimerObj.cancel()  # stop music thread, make sure to call these 2 lines every time program exits
         musicTimer.musicTimerObj.join()
-        sys.exit()
+        sys.exit(1)
 
     def start_screen(self):
         if not self.run_gui: 
