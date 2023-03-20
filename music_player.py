@@ -41,7 +41,7 @@ def snakeonthebeach(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Currently Playing - Snake On The Beach by Nico Staf")
+        print(f"{Fore.RED}Currently Playing - Snake On The Beach by Nico Staf")
 
     return sound
 
@@ -58,7 +58,7 @@ def aparisiancafe(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Currently Playing - A Parisian Cafe by Aaron Kenny")
+        print(f"{Fore.RED}Currently Playing - A Parisian Cafe by Aaron Kenny")
 
     return sound
 
@@ -76,7 +76,7 @@ def bliss(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Currently Playing - Bliss by Luke Bergs")
+        print(f"{Fore.RED}Currently Playing - Bliss by Luke Bergs")
 
     return sound
 
@@ -94,7 +94,7 @@ def happynjoyfulchildren(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Currently Playing - Happy and Joyful Children")
+        print(f"{Fore.RED}Currently Playing - Happy and Joyful Children")
 
     return sound
 
@@ -112,7 +112,7 @@ def tropicalsoul(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Currently Playing - Tropical Soul by Luke Bergs")
+        print(f"{Fore.RED}Currently Playing - Tropical Soul by Luke Bergs")
 
     return sound
 
@@ -130,7 +130,7 @@ def newlands(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Currently Playing - New Lands by Alex-Productions")
+        print(f"{Fore.RED}Currently Playing - New Lands by Alex-Productions")
 
     return sound
 
@@ -148,7 +148,7 @@ def beachvibes(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Currently Playing - Beach Vibes by Luke Bergs")
+        print(f"{Fore.RED}Currently Playing - Beach Vibes by Luke Bergs")
 
     return sound
 
@@ -165,7 +165,7 @@ def tropicalfever(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Currently Playing - Tropical Fever by Luke Bergs & LiQWYD")
+        print(f"{Fore.RED}Currently Playing - Tropical Fever by Luke Bergs & LiQWYD")
 
     return 
 
@@ -182,7 +182,7 @@ def happyadricanvillage(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Currently Playing - Happy African Village by John Bartmann")
+        print(f"{Fore.RED}Currently Playing - Happy African Village by John Bartmann")
 
     return sound
 
@@ -210,7 +210,7 @@ def music():
 
     start_song(print_song_name = not GUIInstance.run_gui)
     if not GUIInstance.run_gui:
-        print(Fore.BLUE + "Music has started")
+        print(f"{Fore.BLUE}Music has started")
 
 
 # Another function to not print all the stuff when starting new song
