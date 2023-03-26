@@ -35,8 +35,8 @@ class GUI:
             self.font = pygame.font.Font(None, 60)
             self.button_font = pygame.font.Font(None, 40)
             self.small_font = pygame.font.Font(None, 30)
-        self.button_left = Button(screen_width * .25, screen_height * .9, 200, 60, text="LEFT", font=self.button_font, bg_color=(200, 200, 200), hover_color=(220, 220, 220))
-        self.button_right = Button(screen_width * .75, screen_height * .9, 200, 60, text="RIGHT", font=self.button_font, bg_color=(200, 200, 200), hover_color=(220, 220, 220))
+        self.button_left = Button(screen_width * .25, screen_height * .9, 200, 60, text="LEFT", font=self.button_font, bg_color=(200, 200, 200), hover_color=(240, 240, 240))
+        self.button_right = Button(screen_width * .75, screen_height * .9, 200, 60, text="RIGHT", font=self.button_font, bg_color=(200, 200, 200), hover_color=(240, 240, 240))
         self.buttons_lst = [self.button_left, self.button_right]
         self.screen = screen
         self.screen_width, self.screen_height = self.screen.get_size()
@@ -163,7 +163,7 @@ class GUI:
 
         # initialize texts
         text_renders = self.__seperate_text_to_rows(text, self.screen_width - 50, self.font)
-        enter_text = self.small_font.render("Press Enter to continue", True, (0,0,0))
+        enter_text = self.small_font.render("Press Enter to continue", True, (255,255,255))
 
         while True:
             self.screen.blit(self.background, (0, 0))
@@ -201,8 +201,8 @@ class GUI:
                                 self.screen_height * .7 - text_box_h / 2, text_box_w, text_box_h), font=self.font)    
 
         music_toggle = Toggle(self.screen_width - self.music_toggle_size - 20, 20, "assets/images/MusicOn.png", "assets/images/MusicOff.png", (self.music_toggle_size, self.music_toggle_size))
-
-        text = self.font.render("Hi! What is you name?", True, (0,0,0))
+        
+        text = self.font.render("Hi! What is you name?", True, (255, 255, 255))
 
         got_name = False
 
