@@ -1,3 +1,12 @@
+# [0.16.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.15.0...v0.16.0) (2023-03-20)
+
+
+### Features
+
+* Refactor Code (make code more concise in some places) ([#59](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/59)) ([f80317a](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/f80317abe42d3afe976204dbb9361c2e74a6e73f))
+
+
+
 # [0.15.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.14.0...v0.15.0) (2023-03-16)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * grammar issues ([#43](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/43)) ([ff897db](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/ff897db843e11c9cb0977820bd6be477bfac491a)), closes [#35](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/issues/35)
-
-
-
-# [0.13.0](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/compare/v0.12.0...v0.13.0) (2023-03-13)
-
-
-### Features
-
-* create game logo ([f593016](https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game/commit/f59301628feb6e75fafecfb1c2af328637389283))
 
 
 
