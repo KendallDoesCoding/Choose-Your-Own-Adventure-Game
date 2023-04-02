@@ -34,11 +34,8 @@ You can run **Choose Your Own Adventure Game** in Gitpod, a free online dev envi
 
 To run in Gitpod:
 
-- Please ensure you first open up the terminal and paste.
+- Please install the requirements mentioned above - [Requirements](#requirements).
 
-```
-pip install -r requirements.txt
-```
 
 **NOTE**: If it asks you for Music in GitPod, please say "n" as there is a bug which we are working on fixing. The music works perfectly if you run the Python file locally though.
 
