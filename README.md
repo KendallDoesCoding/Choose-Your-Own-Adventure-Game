@@ -9,7 +9,9 @@ A simple **Choose Your Own Adventure Game** created using python.
 Currently, there are **3** possible winning solutions. In the future versions, there will be more questions and thus more winning solutions.
 
 # Requirements
+
 The following are the requirements required to run this project locally:
+
 - Python 3.0
 - If GUI is Compatible with Device:
   - PyGame is required. (Pip Module)
@@ -17,9 +19,11 @@ The following are the requirements required to run this project locally:
   - Colorama is required. (Pip Module)
 
 To get the required requirements, run this in your terminal, after cding to the project folder.
+
 ```
 pip install -r requirements.txt
 ```
+
 # Steps to Run
 
 Run `main.py`
@@ -35,7 +39,6 @@ You can run **Choose Your Own Adventure Game** in Gitpod, a free online dev envi
 To run in Gitpod:
 
 - Please install the requirements mentioned above - [Requirements](#requirements).
-
 
 **NOTE**: If it asks you for Music in GitPod, please say "n" as there is a bug which we are working on fixing. The music works perfectly if you run the Python file locally though.
 
@@ -78,7 +81,7 @@ Further, the following songs are used (copyright free, no license required):
 Thanks to all our contributors for their active support and participation!
 
 `<a href = "https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game">`
-  `<img src = "https://contrib.rocks/image?repo=KendallDoesCoding/Choose-Your-Own-Adventure-Game"/>`
+`<img src = "https://contrib.rocks/image?repo=KendallDoesCoding/Choose-Your-Own-Adventure-Game"/>`
 `</a>`
 
 # Example
