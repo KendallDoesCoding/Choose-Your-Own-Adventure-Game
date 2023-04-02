@@ -12,9 +12,9 @@ Currently, there are **3** possible winning solutions. In the future versions, t
 The following are the requirements required to run this project locally:
 - Python 3.0
 - If GUI is Compatible with Device:
-  - PyGame is required (Pip Module)
+  - PyGame is required. (Pip Module)
 - If GUI is NOT Compatible with Device:
-  - Colorama (Pip Module)
+  - Colorama is required. (Pip Module)
 
 To get the required requirements, run this in your terminal, after cding to the project folder.
 ```
