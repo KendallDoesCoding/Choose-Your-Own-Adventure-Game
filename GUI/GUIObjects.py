@@ -1,4 +1,4 @@
-import pygame, os
+import pygame
 pygame.init()
 
 class Button:
@@ -13,12 +13,8 @@ class Button:
         self.bg_color = bg_color
         self.hover_color = hover_color
         self.hovering = False
-        
-        if font is None:
-            self.font = pygame.font.Font(None, font_size)
-        else: 
-            self.font = font
 
+        self.font = pygame.font.Font(None, font_size) if font is None else font
         self.text = text
         self.text_color = text_color
         self.font_size = font_size
@@ -35,12 +31,11 @@ class Button:
                 self.image.fill(self.border_color)
                 pygame.draw.rect(self.image, self.hover_color, (self.border, self.border, self.width-self.border*2, self.height-self.border*2))
 
+        elif self.border == 0:
+            self.image.fill(self.bg_color)
         else:
-            if self.border == 0:
-                self.image.fill(self.bg_color)
-            else:
-                self.image.fill(self.border_color)
-                pygame.draw.rect(self.image, self.bg_color, (self.border, self.border, self.width-self.border*2, self.height-self.border*2))
+            self.image.fill(self.border_color)
+            pygame.draw.rect(self.image, self.bg_color, (self.border, self.border, self.width-self.border*2, self.height-self.border*2))
 
         #text        
         text = self.font.render(self.text, True, self.text_color)
@@ -54,17 +49,16 @@ class Button:
 
 
     def check_hover(self, mouse_pos):
-        if mouse_pos[0] >= self.x and mouse_pos[0] <= self.x+self.width and mouse_pos[1] >= self.y and mouse_pos[1] <= self.y+self.height:
-            self.hovering = True
-        else:
-            self.hovering = False
+        self.hovering = (
+            mouse_pos[0] >= self.x
+            and mouse_pos[0] <= self.x + self.width
+            and mouse_pos[1] >= self.y
+            and mouse_pos[1] <= self.y + self.height
+        )
 
 
     def check_click(self):
-        if self.hovering:
-            return True
-            
-        return False
+        return bool(self.hovering)
     
 
 class Text_box():
@@ -74,7 +68,7 @@ class Text_box():
         self.x = x - width / 2
         self.y = y - height / 2
         self.width = width
-        self.height = height 
+        self.height = height
         self.pos = (self.x, self.y)
         self.size = (width, height)
         self.image = pygame.Surface((width, height))
@@ -93,20 +87,10 @@ class Text_box():
         self.placeholder_txt = placeholder_txt
         self.placeholder_color = placeholder_color
         self.max_chars = max_chars # -1 is infinite
-        if self.max_chars < 0:
-            self.inifnite_chars = True
-        else: self.inifnite_chars = False
+        self.inifnite_chars = self.max_chars < 0
 
     def draw(self, screen):
-        if not self.active:
-            if self.border == 0:
-                self.image.fill(self.bg_color)
-            else:
-                self.image.fill(self.border_color)
-                pygame.draw.rect(self.image, self.bg_color, (self.border, self.border, 
-                                 self.width-self.border*2, self.height-self.border*2))
-
-        else:
+        if self.active:
             if self.border == 0:
                 self.image.fill(self.active_color)
             else:
@@ -114,27 +98,38 @@ class Text_box():
                 pygame.draw.rect(self.image, self.active_color, (self.border, self.border, 
                                  self.width-self.border*2, self.height-self.border*2))
 
+        elif self.border == 0:
+            self.image.fill(self.bg_color)
+        else:
+            self.image.fill(self.border_color)
+            pygame.draw.rect(self.image, self.bg_color, (self.border, self.border, 
+                             self.width-self.border*2, self.height-self.border*2))
+
         #rendering text
         if self.text == "":
             placeholder_txt = self.font.render(self.placeholder_txt, True, self.placeholder_color)
             placeholder_txt.set_alpha(100)
-            text_width = placeholder_txt.get_width()
-            text_height = placeholder_txt.get_height()
-            if text_width < self.width-self.border*2:
-                self.image.blit(placeholder_txt, (2+self.border*2,(self.height-text_height)//2))
-            else:
-                self.image.blit(placeholder_txt, ((self.border*2)+(self.width-text_width-self.border*3),(self.height-text_height)//2))
-
+            self._extracted_from_draw_21(placeholder_txt)
         else:
             text = self.font.render(self.text, False, self.text_color)
-            text_width = text.get_width()
-            text_height = text.get_height()
-            if text_width < self.width-self.border*2:
-                self.image.blit(text, (2+self.border*2,(self.height-text_height)//2))
-            else:
-                self.image.blit(text, ((self.border*2)+(self.width-text_width-self.border*3),(self.height-text_height)//2))
-
+            self._extracted_from_draw_21(text)
         screen.blit(self.image, self.pos)
+
+    # TODO Rename this here and in `draw`
+    def _extracted_from_draw_21(self, arg0):
+        text_width = arg0.get_width()
+        text_height = arg0.get_height()
+        if text_width < self.width-self.border*2:
+            self.image.blit(arg0, (2+self.border*2,(self.height-text_height)//2))
+        else:
+            self.image.blit(
+                arg0,
+                (
+                    (self.border * 2)
+                    + (self.width - text_width - self.border * 3),
+                    (self.height - text_height) // 2,
+                ),
+            )
     
     def add_text(self, key):
         
@@ -150,45 +145,42 @@ class Text_box():
 
             if len(self.text) < self.max_chars or self.inifnite_chars:
                 # Adding numbers
-                if not self.only_letters:
-                    if key in self.numbers:
-                        text = list(self.text)
-                        if key < 100:
-                            text.append(str(key-48))
-                        self.text = "".join(text)
-                
+                if not self.only_letters and key in self.numbers:
+                    text = list(self.text)
+                    if key < 100:
+                        text.append(str(key-48))
+                    self.text = "".join(text)
+
                 # Spacebar
                 if key == 32:
-                    text = list(self.text)
-                    text.append(" ")
-                    self.text = "".join(text)
-                # Dot
+                    self._extracted_from_add_text_24(" ")
                 elif key == 46:
-                    text = list(self.text)
-                    text.append(".")
-                    self.text = "".join(text)
-                
-
-                # Add letters
-                if not self.only_numbers:
-                    if chr(key).isalpha():
+                    self._extracted_from_add_text_24(".")
+                if chr(key).isalpha():
+                    if not self.only_numbers:
                         text = list(self.text)
                         text.append(chr(key))
                         self.text = "".join(text)
-                    # Coma
-                    elif key == 44:
-                        text = list(self.text)
-                        text.append(",")
-                        self.text = "".join(text)
-        except:
+                elif key == 44:
+                    if not self.only_numbers:
+                        self._extracted_from_add_text_24(",")
+        except Exception:
             # Invalid key
             print(key, "is invalid key")
 
+    # TODO Rename this here and in `add_text`
+    def _extracted_from_add_text_24(self, arg0):
+        text = list(self.text)
+        text.append(arg0)
+        self.text = "".join(text)
+
     def check_click(self, mouse_pos):
-        if mouse_pos[0] >= self.x and mouse_pos[0] <= self.x+self.width and mouse_pos[1] >= self.y and mouse_pos[1] <= self.y+self.height:
-            self.active = True
-        else:
-            self.active = False
+        self.active = (
+            mouse_pos[0] >= self.x
+            and mouse_pos[0] <= self.x + self.width
+            and mouse_pos[1] >= self.y
+            and mouse_pos[1] <= self.y + self.height
+        )
 
     def return_val(self):
         if self.only_letters:
@@ -258,7 +250,7 @@ class TextBox(object):
             if kwarg in defaults:
                 defaults[kwarg] = kwargs[kwarg]
             else:
-                raise KeyError("InputBox accepts no keyword {}.".format(kwarg))
+                raise KeyError(f"InputBox accepts no keyword {kwarg}.")
         self.__dict__.update(defaults)
 
     def get_event(self,event):

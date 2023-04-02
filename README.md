@@ -9,11 +9,17 @@ A simple **Choose Your Own Adventure Game** created using python.
 Currently, there are **3** possible winning solutions. In the future versions, there will be more questions and thus more winning solutions.
 
 # Requirements
-
+The following are the requirements required to run this project locally:
 - Python 3.0
-- Colorama (Pip module)
+- If GUI is Compatible with Device:
+  - PyGame is required. (Pip Module)
+- If GUI is NOT Compatible with Device:
+  - Colorama is required. (Pip Module)
 
-
+To get the required requirements, run this in your terminal, after cding to the project folder.
+```
+pip install -r requirements.txt
+```
 # Steps to Run
 
 Run `main.py`
@@ -23,14 +29,13 @@ Run `main.py`
 You can run **Choose Your Own Adventure Game** in Gitpod, a free online dev environment for GitHub.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game)
+
 <!-- CONTRIBUTING -->
 
 To run in Gitpod:
-- Please ensure you first open up the terminal and paste.
 
-```
-pip install -r requirements.txt
-```
+- Please install the requirements mentioned above - [Requirements](#requirements).
+
 
 **NOTE**: If it asks you for Music in GitPod, please say "n" as there is a bug which we are working on fixing. The music works perfectly if you run the Python file locally though.
 
@@ -60,6 +65,8 @@ Further, the following songs are used (copyright free, no license required):
 
 - Snake On The Beach by Nico Staf
 - A Parisian Cafe by Aaron Kenny
+- Tropical Fever by Luke Bergs & LiQWYD
+- Happy African Village by John Bartmann
 
 ### Other Credits
 
@@ -67,12 +74,12 @@ Further, the following songs are used (copyright free, no license required):
 - Code for Text box from https://github.com/Mekire/pygame-textbox
 
 # Contributors
+
 Thanks to all our contributors for their active support and participation!
 
-<a href = "https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game">
-  <img src = "https://contrib.rocks/image?repo=KendallDoesCoding/Choose-Your-Own-Adventure-Game"/>
-</a>
-
+`<a href = "https://github.com/KendallDoesCoding/Choose-Your-Own-Adventure-Game">`
+  `<img src = "https://contrib.rocks/image?repo=KendallDoesCoding/Choose-Your-Own-Adventure-Game"/>`
+`</a>`
 
 # Example
 

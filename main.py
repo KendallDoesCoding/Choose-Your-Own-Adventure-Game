@@ -20,9 +20,7 @@ from GUI.GUI import GUIInstance
 # install missing modules
 required = {"colorama==0.4.6", "pygame==2.2.0"}
 installed = {pkg.key for pkg in pkg_resources.working_set}
-missing = required - installed
-
-if missing:
+if missing := required - installed:
     python = sys.executable
     subprocess.check_call([python, "-m", "pip", "install", *missing],
                           stdout=subprocess.DEVNULL)
@@ -47,11 +45,12 @@ RUN_GUI = True
 
 try:
     WINDOW = pygame.display.set_mode((SCR_W, SCR_H))
+    print(Fore.RED + "Game opened with Pygame!")
 except Exception as e:
     RUN_GUI = False
-    print(f"Running without pygame")
+    print(Fore.RED + "Running without pygame")
 
-pygame.display.set_caption("Choose Your Own Adventure") 
+pygame.display.set_caption("Choose Your Own Adventure")
 pygame.display.set_icon(pygame.image.load("assets/images/logo.png"))    # SET PYGAME WINDOW ICON
 
 
