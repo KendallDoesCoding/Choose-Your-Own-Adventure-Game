@@ -6,7 +6,9 @@ from colorama import Fore
 
 import chapters
 import music.musicTimer as musicTimer  # stop music thread in this file
-from GUI.GUIObjects import Button, TextBox, Toggle
+from GUI.GUIObjects import Button
+from GUI.GUIObjects import TextBox
+from GUI.GUIObjects import Toggle
 
 pygame.init()
 
