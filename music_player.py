@@ -23,7 +23,8 @@ def fluffingaduck(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Currently Playing - Fluffing a Duck by Kevin Macleod")
+        print(Fore.RED +
+              "Currently Playing - Fluffing a Duck by Kevin Macleod")
 
     return sound
 
@@ -166,7 +167,9 @@ def tropicalfever(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(f"{Fore.RED}Currently Playing - Tropical Fever by Luke Bergs & LiQWYD")
+        print(
+            f"{Fore.RED}Currently Playing - Tropical Fever by Luke Bergs & LiQWYD"
+        )
 
     return
 
@@ -184,7 +187,9 @@ def happyadricanvillage(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(f"{Fore.RED}Currently Playing - Happy African Village by John Bartmann")
+        print(
+            f"{Fore.RED}Currently Playing - Happy African Village by John Bartmann"
+        )
 
     return sound
 
@@ -220,8 +225,7 @@ def start_song(print_song_name=True):
 
     # create a Timer object that will run this function again after the song has ended
     musicTimer.musicTimerObj = threading.Timer(
-        sound.get_length(), start_song, kwargs={"print_song_name": False}
-    )
+        sound.get_length(), start_song, kwargs={"print_song_name": False})
     musicTimer.musicTimerObj.start()
 
 

@@ -14,6 +14,7 @@ pygame.init()
 
 
 class GUI:
+
     def __init__(self):
         self.bg_color = (128, 255, 0)
         self.space_between_text = 60
@@ -22,7 +23,8 @@ class GUI:
     def set_params_no_gui(self):
         self.run_gui = False
 
-    def set_params(self, screen_width: int, screen_height: int, screen: pygame.Surface):
+    def set_params(self, screen_width: int, screen_height: int,
+                   screen: pygame.Surface):
         self.run_gui = True
 
         # find a font that can draw emojis
@@ -68,8 +70,7 @@ class GUI:
         self.logo = pygame.image.load("assets/images/logo.png")
         aspect_ratio = self.logo.get_size()[1] / self.logo.get_size()[0]
         self.logo = pygame.transform.smoothscale(
-            self.logo, (logo_width, logo_width * aspect_ratio)
-        )
+            self.logo, (logo_width, logo_width * aspect_ratio))
 
         # BG
         bg_height = self.screen_height
@@ -80,9 +81,8 @@ class GUI:
 
     # private function
 
-    def __seperate_text_to_rows(
-        self, text: str, max_width: int, font_to_use: pygame.font.Font
-    ) -> list:
+    def __seperate_text_to_rows(self, text: str, max_width: int,
+                                font_to_use: pygame.font.Font) -> list:
         """Takes in: text to split\n max_width allowed, example: screen width\n font to use: What font will the text be rendered in \n
         RETURNS pygame.Surface renders of the text that are split according to max_width
         """
@@ -104,7 +104,8 @@ class GUI:
 
             # if the render is wider than allowed, render the things that fit in
             if _text_render.get_size()[0] > max_width:
-                _out_text = " ".join(words[last_overflow_index : _index_in_words - 1])
+                _out_text = " ".join(
+                    words[last_overflow_index:_index_in_words - 1])
                 _final_text = font_to_use.render(_out_text, True, (0, 0, 0))
                 output_text_objs.append(_final_text)
 
@@ -113,7 +114,8 @@ class GUI:
 
             # if last word, add rest and break from loop
             if _index_in_words == len(words):
-                _out_text = " ".join(words[last_overflow_index:_index_in_words])
+                _out_text = " ".join(
+                    words[last_overflow_index:_index_in_words])
                 _final_text = font_to_use.render(_out_text, True, (0, 0, 0))
                 output_text_objs.append(_final_text)
                 break
@@ -124,9 +126,9 @@ class GUI:
     def __render_text_center(self, texts: list):
         """Render list of pygame text renders in the center of the screen"""
         # Get total height of text elements rendered. Sum all text heights and add the spaces between them
-        total_height = sum(x.get_size()[1] for x in texts) + self.space_between_text * (
-            len(texts) - 1
-        )
+        total_height = sum(
+            x.get_size()[1]
+            for x in texts) + self.space_between_text * (len(texts) - 1)
 
         # Loop through every text element and render it
         for _i, _text in enumerate(texts):
@@ -134,15 +136,13 @@ class GUI:
 
             # Get the position to render it in the center of screen
             center_x = self.screen_width / 2 - _text_width / 2
-            center_y = (
-                self.screen_height / 2 - _text_height / 2 + 60 * _i
-            ) - total_height / 4  # make all texts centered
+            center_y = (self.screen_height / 2 - _text_height / 2 +
+                        60 * _i) - total_height / 4  # make all texts centered
 
             self.screen.blit(_text, (center_x, center_y))
 
-    def ask_question(
-        self, question: str, left_btn_txt: str, right_btn_txt: str
-    ) -> bool:
+    def ask_question(self, question: str, left_btn_txt: str,
+                     right_btn_txt: str) -> bool:
         """Ask a question with two answers.\n
         RETURNS: If pressed left_button: Return True. If pressed right_button: Return False
         """
@@ -156,9 +156,9 @@ class GUI:
             )
 
         # Initalize texts and buttons
-        text_renders = self.__seperate_text_to_rows(
-            question, self.screen_width - 50, self.font
-        )
+        text_renders = self.__seperate_text_to_rows(question,
+                                                    self.screen_width - 50,
+                                                    self.font)
         self.button_left.text = left_btn_txt
         self.button_right.text = right_btn_txt
 
@@ -176,10 +176,8 @@ class GUI:
                     self.exit_func()
 
                 # If left mousebutton clicked, check if clicked on a button
-                if (
-                    event.type == pygame.MOUSEBUTTONDOWN
-                    and pygame.mouse.get_pressed()[0]
-                ):
+                if (event.type == pygame.MOUSEBUTTONDOWN
+                        and pygame.mouse.get_pressed()[0]):
                     if self.button_left.check_click():
                         return True
                     if self.button_right.check_click():
@@ -194,10 +192,11 @@ class GUI:
         Includes a small text that says 'press enter to continue'"""
 
         # initialize texts
-        text_renders = self.__seperate_text_to_rows(
-            text, self.screen_width - 50, self.font
-        )
-        enter_text = self.small_font.render("Press Enter to continue", True, (0, 0, 0))
+        text_renders = self.__seperate_text_to_rows(text,
+                                                    self.screen_width - 50,
+                                                    self.font)
+        enter_text = self.small_font.render("Press Enter to continue", True,
+                                            (0, 0, 0))
 
         while True:
             self.screen.blit(self.background, (0, 0))
@@ -273,10 +272,8 @@ class GUI:
                     self.exit_func()
 
                 name_text_box.get_event(event)
-                if (
-                    event.type == pygame.MOUSEBUTTONDOWN
-                    and pygame.mouse.get_pressed()[0]
-                ):
+                if (event.type == pygame.MOUSEBUTTONDOWN
+                        and pygame.mouse.get_pressed()[0]):
                     music_toggle.check_click(pygame.mouse.get_pos())
 
                     if music_toggle.get_state() == 1:
@@ -335,11 +332,11 @@ class GUI:
         print(f"{Fore.LIGHTGREEN_EX}Welcome", name, "to this adventure!")
 
         if self.__ask_question_no_gui(
-            "Do you want to play? (yes / no) ",
-            "yes",
-            "no",
-            color_before=Fore.YELLOW,
-            color_after=Fore.LIGHTBLUE_EX,
+                "Do you want to play? (yes / no) ",
+                "yes",
+                "no",
+                color_before=Fore.YELLOW,
+                color_after=Fore.LIGHTBLUE_EX,
         ):
             # Yes
             print(Fore.LIGHTGREEN_EX + "Let's play! \U0001F3AE")
