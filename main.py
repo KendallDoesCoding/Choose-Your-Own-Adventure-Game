@@ -1,15 +1,16 @@
 # import modules
-import pygame
-from GUI.GUI import GUIInstance
-import music_player
-from chapters import *
-import pkg_resources
+# Set the taskbar icon to same as pygame window icon
+import ctypes
 import os
 import subprocess
 import sys
 
-# Set the taskbar icon to same as pygame window icon
-import ctypes
+import pkg_resources
+import pygame
+
+import music_player
+from chapters import *
+from GUI.GUI import GUIInstance
 
 myappid = "KendallDoesCoding.ChooseYourAdventureGame.1.0"  # arbitrary string
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)

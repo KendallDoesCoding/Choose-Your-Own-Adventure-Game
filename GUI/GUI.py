@@ -1,12 +1,12 @@
-from GUI.GUIObjects import Button, TextBox, Toggle
-import music.musicTimer as musicTimer  # stop music thread in this file
-import chapters
+import random
 import sys
 
-from colorama import Fore
-import random
-
 import pygame
+from colorama import Fore
+
+import chapters
+import music.musicTimer as musicTimer  # stop music thread in this file
+from GUI.GUIObjects import Button, TextBox, Toggle
 
 pygame.init()
 

@@ -1,6 +1,7 @@
-import pygame as pg
 import string
+
 import pygame
+import pygame as pg
 
 pygame.init()
 
