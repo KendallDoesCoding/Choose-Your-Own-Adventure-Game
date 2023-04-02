@@ -1,21 +1,20 @@
 # import modules
+import pygame
+from GUI.GUI import GUIInstance
+import music_player
+from chapters import *
+import pkg_resources
+import os
 import subprocess
 import sys
 
 # Set the taskbar icon to same as pygame window icon
 import ctypes
-myappid = 'KendallDoesCoding.ChooseYourAdventureGame.1.0' # arbitrary string
+myappid = 'KendallDoesCoding.ChooseYourAdventureGame.1.0'  # arbitrary string
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
-import os
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
 
-import pkg_resources
-
-from chapters import *
-import music_player
-
-from GUI.GUI import GUIInstance
 
 # install missing modules
 required = {"colorama==0.4.6", "pygame==2.2.0"}
@@ -26,7 +25,6 @@ if missing := required - installed:
                           stdout=subprocess.DEVNULL)
 
 # import dependencies
-import pygame
 pygame.init()
 
 
@@ -51,7 +49,8 @@ except Exception as e:
     print(Fore.RED + "Running without pygame")
 
 pygame.display.set_caption("Choose Your Own Adventure")
-pygame.display.set_icon(pygame.image.load("assets/images/logo.png"))    # SET PYGAME WINDOW ICON
+pygame.display.set_icon(pygame.image.load(
+    "assets/images/logo.png"))    # SET PYGAME WINDOW ICON
 
 
 def main():
@@ -60,7 +59,7 @@ def main():
         music_player.music()
     else:
         GUIInstance.set_params_no_gui()
- 
+
     GUIInstance.start_screen()
     random.choice(my_list)()
 
