@@ -9,10 +9,17 @@ A simple **Choose Your Own Adventure Game** created using python.
 Currently, there are **3** possible winning solutions. In the future versions, there will be more questions and thus more winning solutions.
 
 # Requirements
-
+The following are the requirements required to run this project locally:
 - Python 3.0
-- Colorama (Pip module)
+- If GUI is Compatible with Device:
+  - PyGame is required (Pip Module)
+- If GUI is NOT Compatible with Device:
+  - Colorama (Pip Module)
 
+To get the required requirements, run this in your terminal, after cding to the project folder.
+```
+pip install -r requirements.txt
+```
 # Steps to Run
 
 Run `main.py`
