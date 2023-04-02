@@ -10,7 +10,8 @@ import sys
 
 # Set the taskbar icon to same as pygame window icon
 import ctypes
-myappid = 'KendallDoesCoding.ChooseYourAdventureGame.1.0'  # arbitrary string
+
+myappid = "KendallDoesCoding.ChooseYourAdventureGame.1.0"  # arbitrary string
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
@@ -21,8 +22,9 @@ required = {"colorama==0.4.6", "pygame==2.2.0"}
 installed = {pkg.key for pkg in pkg_resources.working_set}
 if missing := required - installed:
     python = sys.executable
-    subprocess.check_call([python, "-m", "pip", "install", *missing],
-                          stdout=subprocess.DEVNULL)
+    subprocess.check_call(
+        [python, "-m", "pip", "install", *missing], stdout=subprocess.DEVNULL
+    )
 
 # import dependencies
 pygame.init()
@@ -49,8 +51,9 @@ except Exception as e:
     print(Fore.RED + "Running without pygame")
 
 pygame.display.set_caption("Choose Your Own Adventure")
-pygame.display.set_icon(pygame.image.load(
-    "assets/images/logo.png"))    # SET PYGAME WINDOW ICON
+pygame.display.set_icon(
+    pygame.image.load("assets/images/logo.png")
+)  # SET PYGAME WINDOW ICON
 
 
 def main():

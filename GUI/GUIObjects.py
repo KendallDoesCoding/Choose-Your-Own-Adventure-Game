@@ -1,11 +1,27 @@
 import pygame as pg
 import string
 import pygame
+
 pygame.init()
 
 
 class Button:
-    def __init__(self, x, y, width, height, bg_color=(120, 120, 120), hover_color=(150, 150, 150), text="Text", text_color=(0, 0, 0), font_size=18, center_text=True, border=0, border_color=(0, 0, 0), font=None):
+    def __init__(
+        self,
+        x,
+        y,
+        width,
+        height,
+        bg_color=(120, 120, 120),
+        hover_color=(150, 150, 150),
+        text="Text",
+        text_color=(0, 0, 0),
+        font_size=18,
+        center_text=True,
+        border=0,
+        border_color=(0, 0, 0),
+        font=None,
+    ):
         self.x = x - width / 2
         self.y = y - height / 2
         self.width = width
@@ -31,15 +47,31 @@ class Button:
                 self.image.fill(self.hover_color)
             else:
                 self.image.fill(self.border_color)
-                pygame.draw.rect(self.image, self.hover_color, (self.border,
-                                 self.border, self.width-self.border*2, self.height-self.border*2))
+                pygame.draw.rect(
+                    self.image,
+                    self.hover_color,
+                    (
+                        self.border,
+                        self.border,
+                        self.width - self.border * 2,
+                        self.height - self.border * 2,
+                    ),
+                )
 
         elif self.border == 0:
             self.image.fill(self.bg_color)
         else:
             self.image.fill(self.border_color)
-            pygame.draw.rect(self.image, self.bg_color, (self.border, self.border,
-                             self.width-self.border*2, self.height-self.border*2))
+            pygame.draw.rect(
+                self.image,
+                self.bg_color,
+                (
+                    self.border,
+                    self.border,
+                    self.width - self.border * 2,
+                    self.height - self.border * 2,
+                ),
+            )
 
         # text
         text = self.font.render(self.text, True, self.text_color)
@@ -47,11 +79,17 @@ class Button:
         text_height = text.get_height()
 
         if self.center_text:
-            self.image.blit(text, (self.width//2-text_width //
-                            2, self.height//2-text_height//2))
+            self.image.blit(
+                text,
+                (
+                    self.width // 2 - text_width // 2,
+                    self.height // 2 - text_height // 2,
+                ),
+            )
         else:
             self.image.blit(
-                text, (self.border+5, self.height//2-text_height//2))
+                text, (self.border + 5, self.height // 2 - text_height // 2)
+            )
         screen.blit(self.image, self.pos)
 
     def check_hover(self, mouse_pos):
@@ -66,10 +104,25 @@ class Button:
         return bool(self.hovering)
 
 
-class Text_box():
-    def __init__(self, x, y, width, height, bg_color=(155, 155, 155), active_color=(200, 200, 200),
-                 text_size=24, text_color=(0, 0, 0), border=0, border_color=(0, 0, 0), only_letters=False,
-                 only_numbers=False, placeholder_txt="Text", placeholder_color=(100, 100, 100), max_chars=-1):
+class Text_box:
+    def __init__(
+        self,
+        x,
+        y,
+        width,
+        height,
+        bg_color=(155, 155, 155),
+        active_color=(200, 200, 200),
+        text_size=24,
+        text_color=(0, 0, 0),
+        border=0,
+        border_color=(0, 0, 0),
+        only_letters=False,
+        only_numbers=False,
+        placeholder_txt="Text",
+        placeholder_color=(100, 100, 100),
+        max_chars=-1,
+    ):
         self.x = x - width / 2
         self.y = y - height / 2
         self.width = width
@@ -100,20 +153,37 @@ class Text_box():
                 self.image.fill(self.active_color)
             else:
                 self.image.fill(self.border_color)
-                pygame.draw.rect(self.image, self.active_color, (self.border, self.border,
-                                 self.width-self.border*2, self.height-self.border*2))
+                pygame.draw.rect(
+                    self.image,
+                    self.active_color,
+                    (
+                        self.border,
+                        self.border,
+                        self.width - self.border * 2,
+                        self.height - self.border * 2,
+                    ),
+                )
 
         elif self.border == 0:
             self.image.fill(self.bg_color)
         else:
             self.image.fill(self.border_color)
-            pygame.draw.rect(self.image, self.bg_color, (self.border, self.border,
-                             self.width-self.border*2, self.height-self.border*2))
+            pygame.draw.rect(
+                self.image,
+                self.bg_color,
+                (
+                    self.border,
+                    self.border,
+                    self.width - self.border * 2,
+                    self.height - self.border * 2,
+                ),
+            )
 
         # rendering text
         if self.text == "":
             placeholder_txt = self.font.render(
-                self.placeholder_txt, True, self.placeholder_color)
+                self.placeholder_txt, True, self.placeholder_color
+            )
             placeholder_txt.set_alpha(100)
             self._extracted_from_draw_21(placeholder_txt)
         else:
@@ -125,21 +195,20 @@ class Text_box():
     def _extracted_from_draw_21(self, arg0):
         text_width = arg0.get_width()
         text_height = arg0.get_height()
-        if text_width < self.width-self.border*2:
+        if text_width < self.width - self.border * 2:
             self.image.blit(
-                arg0, (2+self.border*2, (self.height-text_height)//2))
+                arg0, (2 + self.border * 2, (self.height - text_height) // 2)
+            )
         else:
             self.image.blit(
                 arg0,
                 (
-                    (self.border * 2)
-                    + (self.width - text_width - self.border * 3),
+                    (self.border * 2) + (self.width - text_width - self.border * 3),
                     (self.height - text_height) // 2,
                 ),
             )
 
     def add_text(self, key):
-
         if not self.active:
             return
 
@@ -155,7 +224,7 @@ class Text_box():
                 if not self.only_letters and key in self.numbers:
                     text = list(self.text)
                     if key < 100:
-                        text.append(str(key-48))
+                        text.append(str(key - 48))
                     self.text = "".join(text)
 
                 # Spacebar
@@ -200,19 +269,34 @@ class Text_box():
 
 
 class Toggle:
-    def __init__(self, x: int, y: int, image_on_path: str, image_off_path: str, image_size: tuple, default_state: int = 1):
+    def __init__(
+        self,
+        x: int,
+        y: int,
+        image_on_path: str,
+        image_off_path: str,
+        image_size: tuple,
+        default_state: int = 1,
+    ):
         self.x = x
         self.y = y
         self.w, self.h = image_size
         self.image_on = pygame.transform.smoothscale(
-            pygame.image.load(image_on_path), image_size)
+            pygame.image.load(image_on_path), image_size
+        )
         self.image_off = pygame.transform.smoothscale(
-            pygame.image.load(image_off_path), image_size)
+            pygame.image.load(image_off_path), image_size
+        )
         self.default_state = default_state
         self.current_state = 1  # 1 on, -1 off
 
     def check_click(self, mouse_pos: tuple):
-        if mouse_pos[0] >= self.x and mouse_pos[0] <= self.x+self.w and mouse_pos[1] >= self.y and mouse_pos[1] <= self.y+self.h:
+        if (
+            mouse_pos[0] >= self.x
+            and mouse_pos[0] <= self.x + self.w
+            and mouse_pos[1] >= self.y
+            and mouse_pos[1] <= self.y + self.h
+        ):
             self.current_state *= -1
 
     def draw(self, screen: pygame.Surface):
@@ -227,7 +311,7 @@ class Toggle:
 
 # Taken from https://github.com/Mekire/pygame-textbox
 
-ACCEPTED = string.ascii_letters+string.digits+string.punctuation+" "
+ACCEPTED = string.ascii_letters + string.digits + string.punctuation + " "
 
 
 class TextBox(object):
@@ -243,18 +327,20 @@ class TextBox(object):
         self.process_kwargs(kwargs)
 
     def process_kwargs(self, kwargs):
-        defaults = {"id": None,
-                    "command": None,
-                    "active": True,
-                    "color": pg.Color("white"),
-                    "font_color": pg.Color("black"),
-                    "outline_color": pg.Color("black"),
-                    "outline_width": 2,
-                    "active_color": pg.Color("black"),
-                    "font": pg.font.Font(None, self.rect.height+4),
-                    "clear_on_enter": False,
-                    "inactive_on_enter": True,
-                    "max_length": 999}
+        defaults = {
+            "id": None,
+            "command": None,
+            "active": True,
+            "color": pg.Color("white"),
+            "font_color": pg.Color("black"),
+            "outline_color": pg.Color("black"),
+            "outline_width": 2,
+            "active_color": pg.Color("black"),
+            "font": pg.font.Font(None, self.rect.height + 4),
+            "clear_on_enter": False,
+            "inactive_on_enter": True,
+            "max_length": 999,
+        }
         for kwarg in kwargs:
             if kwarg in defaults:
                 defaults[kwarg] = kwargs[kwarg]
@@ -288,21 +374,23 @@ class TextBox(object):
         if new != self.final:
             self.final = new
             self.rendered = self.font.render(self.final, True, self.font_color)
-            self.render_rect = self.rendered.get_rect(x=self.rect.x+2,
-                                                      centery=self.rect.centery)
-            if self.render_rect.width > self.rect.width-6:
-                offset = self.render_rect.width-(self.rect.width-6)
-                self.render_area = pg.Rect(offset, 0, self.rect.width-6,
-                                           self.render_rect.height)
+            self.render_rect = self.rendered.get_rect(
+                x=self.rect.x + 2, centery=self.rect.centery
+            )
+            if self.render_rect.width > self.rect.width - 6:
+                offset = self.render_rect.width - (self.rect.width - 6)
+                self.render_area = pg.Rect(
+                    offset, 0, self.rect.width - 6, self.render_rect.height
+                )
             else:
                 self.render_area = self.rendered.get_rect(topleft=(0, 0))
-        if pg.time.get_ticks()-self.blink_timer > 200:
+        if pg.time.get_ticks() - self.blink_timer > 200:
             self.blink = not self.blink
             self.blink_timer = pg.time.get_ticks()
 
     def draw(self, surface):
         outline_color = self.active_color if self.active else self.outline_color
-        outline = self.rect.inflate(self.outline_width*2, self.outline_width*2)
+        outline = self.rect.inflate(self.outline_width * 2, self.outline_width * 2)
         surface.fill(outline_color, outline)
         surface.fill(self.color, self.rect)
         if self.rendered:
@@ -310,4 +398,4 @@ class TextBox(object):
         if self.blink and self.active:
             curse = self.render_area.copy()
             curse.topleft = self.render_rect.topleft
-            surface.fill(self.font_color, (curse.right+1, curse.y, 2, curse.h))
+            surface.fill(self.font_color, (curse.right + 1, curse.y, 2, curse.h))

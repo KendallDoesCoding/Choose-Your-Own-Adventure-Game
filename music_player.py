@@ -22,8 +22,7 @@ def fluffingaduck(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED +
-              "Currently Playing - Fluffing a Duck by Kevin Macleod")
+        print(Fore.RED + "Currently Playing - Fluffing a Duck by Kevin Macleod")
 
     return sound
 
@@ -199,7 +198,7 @@ songs = [
     newlands,
     beachvibes,
     tropicalfever,
-    happyadricanvillage
+    happyadricanvillage,
 ]
 
 
@@ -220,7 +219,8 @@ def start_song(print_song_name=True):
 
     # create a Timer object that will run this function again after the song has ended
     musicTimer.musicTimerObj = threading.Timer(
-        sound.get_length(), start_song, kwargs={"print_song_name": False})
+        sound.get_length(), start_song, kwargs={"print_song_name": False}
+    )
     musicTimer.musicTimerObj.start()
 
 
