@@ -52,7 +52,7 @@ def chapter_bridge():
     if GUIInstance.ask_question("You come to a bridge, it looks wobbly. Do you want to cross it or do you want to head back?", "Cross", "Back"):
         # 1. Cross
         chapter_stranger()
-    
+
     else:
         # 1. Back
         if GUIInstance.ask_question("You go back to the main road. Now you can decide to drive forward or turn left.", "Forward", "Left"):
@@ -75,8 +75,8 @@ def chapter_stranger():
     else:
         # 1. No
         game_over("The stranger was not pleased by you and murdered you. \U0001F480")
-        
-        
+
+
 def chapter_mountain():
     if GUIInstance.ask_question("You reached a mountain. Do you want to climb it?", "Yes", "No"):
         # 1. Yes
@@ -138,7 +138,7 @@ def game_over(message: str = None, *, win=False):
     elif message:
         # Gui and message
         GUIInstance.text_until_enter(message)
-    
+
     if GUIInstance.ask_question("Thanks for playing!", "Play Again", "Quit"):
         # Play again
         random.choice(my_list)()

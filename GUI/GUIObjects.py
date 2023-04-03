@@ -59,7 +59,7 @@ class Button:
 
     def check_click(self):
         return bool(self.hovering)
-    
+
 
 class Text_box():
     def __init__(self,x,y,width,height,bg_color=(155,155,155),active_color=(200,200,200),
@@ -130,9 +130,9 @@ class Text_box():
                     (self.height - text_height) // 2,
                 ),
             )
-    
+
     def add_text(self, key):
-        
+
         if not self.active:
             return
 
@@ -190,7 +190,7 @@ class Text_box():
             return float(self.text)
         except:
             return 0
-        
+
 
 class Toggle:
     def __init__(self, x: int, y: int, image_on_path: str, image_off_path: str, image_size: tuple, default_state: int=1):
@@ -205,7 +205,7 @@ class Toggle:
     def check_click(self, mouse_pos: tuple):
         if mouse_pos[0] >= self.x and mouse_pos[0] <= self.x+self.w and mouse_pos[1] >= self.y and mouse_pos[1] <= self.y+self.h:
             self.current_state *= -1
-        
+
     def draw(self, screen: pygame.Surface):
         if self.current_state == 1:
             screen.blit(self.image_on, (self.x, self.y))

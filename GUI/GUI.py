@@ -51,7 +51,7 @@ class GUI:
         # BG
         bg_height = self.screen_height
         self.background = pygame.transform.smoothscale(pygame.image.load("assets/images/landscape.png"), (bg_height* 1.778, bg_height))
-        
+
 
     # private function
     def __seperate_text_to_rows(self, text: str, max_width: int, font_to_use: pygame.font.Font) -> list:
@@ -60,10 +60,10 @@ class GUI:
 
         output_text_objs = []
         words = text.split(" ")
-        
+
         # The index of 'words' where the text was longer than 'max_width'
         last_overflow_index = 0
-        
+
         _index_in_words = 0
         # every loop add 1 more word to sentece
         while _index_in_words < len(words) + 1:
@@ -90,7 +90,7 @@ class GUI:
                 output_text_objs.append(_final_text)
                 break
 
-            
+
         return output_text_objs
 
     # private function
@@ -240,7 +240,7 @@ class GUI:
             pygame.display.update()
 
         self.text_until_enter(f"Welcome {player_name} to this adventure!")
-            
+
     def __ask_question_no_gui(self, question: str, first: str, second: str, color_before: Fore=None, color_after: Fore=None) -> bool:
         while(True):
             q = ""
@@ -258,7 +258,7 @@ class GUI:
                 return True
             if answer.lower() == second.lower():
                 return False
-            
+
             print("Invalid answer, try again.")
 
     def __start_screen_no_gui(self):

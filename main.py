@@ -60,7 +60,7 @@ def main():
         music_player.music()
     else:
         GUIInstance.set_params_no_gui()
- 
+
     GUIInstance.start_screen()
     random.choice(my_list)()
 
