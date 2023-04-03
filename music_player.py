@@ -10,7 +10,6 @@ from GUI.GUI import GUIInstance
 
 
 def fluffingaduck(print_song_name=True):
-    import os
 
     os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
     import pygame
@@ -29,7 +28,6 @@ def fluffingaduck(print_song_name=True):
 
 
 def snakeonthebeach(print_song_name=True):
-    import os
 
     os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
     import pygame
@@ -47,7 +45,6 @@ def snakeonthebeach(print_song_name=True):
 
 
 def aparisiancafe(print_song_name=True):
-    import os
 
     os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
     import pygame
@@ -64,7 +61,6 @@ def aparisiancafe(print_song_name=True):
 
 
 def bliss(print_song_name=True):
-    import os
 
     os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
     import pygame
@@ -82,7 +78,6 @@ def bliss(print_song_name=True):
 
 
 def happynjoyfulchildren(print_song_name=True):
-    import os
 
     os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
     import pygame
@@ -100,7 +95,6 @@ def happynjoyfulchildren(print_song_name=True):
 
 
 def tropicalsoul(print_song_name=True):
-    import os
 
     os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
     import pygame
@@ -118,7 +112,6 @@ def tropicalsoul(print_song_name=True):
 
 
 def newlands(print_song_name=True):
-    import os
 
     os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
     import pygame
@@ -136,7 +129,6 @@ def newlands(print_song_name=True):
 
 
 def beachvibes(print_song_name=True):
-    import os
 
     os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
     import pygame
@@ -153,7 +145,6 @@ def beachvibes(print_song_name=True):
     return sound
 
 def tropicalfever(print_song_name=True):
-    import os
 
     os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
     import pygame
@@ -170,7 +161,6 @@ def tropicalfever(print_song_name=True):
     return 
 
 def happyadricanvillage(print_song_name=True):
-    import os
 
     os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
     import pygame
