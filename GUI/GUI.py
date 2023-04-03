@@ -206,7 +206,7 @@ class GUI:
 
         got_name = False
 
-        while (not got_name):
+        while not got_name:
             self.screen.blit(self.background, (0, 0))
             self.screen.blit(self.logo, (self.screen_width / 2 - self.logo.get_size()[0] / 2, 
                                         self.screen_height * .3 - self.logo.get_size()[1] / 2))
@@ -242,7 +242,7 @@ class GUI:
         self.text_until_enter(f"Welcome {player_name} to this adventure!")
 
     def __ask_question_no_gui(self, question: str, first: str, second: str, color_before: Fore=None, color_after: Fore=None) -> bool:
-        while(True):
+        while True:
             q = ""
 
             if color_before:
