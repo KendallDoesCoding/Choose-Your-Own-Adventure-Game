@@ -22,8 +22,7 @@ def fluffingaduck(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + 
-              "Currently Playing - Fluffing a Duck by Kevin Macleod")
+        print(Fore.RED + "Currently Playing - Fluffing a Duck by Kevin Macleod")
 
     return sound
 
@@ -44,7 +43,6 @@ def snakeonthebeach(print_song_name=True):
         print(f"{Fore.RED}Currently Playing - Snake On The Beach by Nico Staf")
 
     return sound
-
 
 def aparisiancafe(print_song_name=True):
     import os
