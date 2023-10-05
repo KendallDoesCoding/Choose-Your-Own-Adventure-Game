@@ -22,7 +22,8 @@ def fluffingaduck(print_song_name=True):
     sound.play()
 
     if print_song_name:
-        print(Fore.RED + "Currently Playing - Fluffing a Duck by Kevin Macleod")
+        print(Fore.RED +
+              "Currently Playing - Fluffing a Duck by Kevin Macleod")
 
     return sound
 
@@ -43,6 +44,7 @@ def snakeonthebeach(print_song_name=True):
         print(f"{Fore.RED}Currently Playing - Snake On The Beach by Nico Staf")
 
     return sound
+
 
 def aparisiancafe(print_song_name=True):
     import os
@@ -150,7 +152,6 @@ def beachvibes(print_song_name=True):
 
     return sound
 
-
 def tropicalfever(print_song_name=True):
     import os
 
@@ -168,7 +169,6 @@ def tropicalfever(print_song_name=True):
 
     return 
 
-
 def happyadricanvillage(print_song_name=True):
     import os
 
@@ -185,6 +185,7 @@ def happyadricanvillage(print_song_name=True):
         print(f"{Fore.RED}Currently Playing - Happy African Village by John Bartmann")
 
     return sound
+
 
 
 songs = [
@@ -207,7 +208,7 @@ def music():
     pygame.init()
     pygame.mixer.init()
 
-    start_song(print_song_name=not GUIInstance.run_gui)
+    start_song(print_song_name = not GUIInstance.run_gui)
     if not GUIInstance.run_gui:
         print(f"{Fore.BLUE}Music has started")
 
