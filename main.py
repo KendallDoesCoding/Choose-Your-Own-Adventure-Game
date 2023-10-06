@@ -6,7 +6,7 @@ import sys
 import ctypes
 import platform
 if platform.system() == "Windows":
-    myappid = 'KendallDoesCoding.ChooseYourAdventureGame.1.0' # arbitrary string
+    myappid = 'KendallDoesCoding.ChooseYourAdventureGame.1.0'  # arbitrary string
     ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 import os

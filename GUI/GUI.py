@@ -173,7 +173,7 @@ class GUI:
                     self.exit_func()
 
                 # Return when enter pressed
-                if event.type == pygame.KEYDOWN and (event.key == pygame.K_RETURN or event.key == pygame.K_KP_ENTER):
+                if event.type == pygame.KEYDOWN and event.key in [pygame.K_RETURN, pygame.K_KP_ENTER]:
                     return
 
             # Render the center text
