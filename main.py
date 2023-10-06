@@ -4,8 +4,10 @@ import sys
 
 # Set the taskbar icon to same as pygame window icon
 import ctypes
-myappid = 'KendallDoesCoding.ChooseYourAdventureGame.1.0' # arbitrary string
-ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+import platform
+if platform.system() == "Windows":
+    myappid = 'KendallDoesCoding.ChooseYourAdventureGame.1.0'  # arbitrary string
+    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 import os
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"

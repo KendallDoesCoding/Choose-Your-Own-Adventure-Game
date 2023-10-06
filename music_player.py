@@ -17,7 +17,7 @@ def fluffingaduck(print_song_name=True):
 
     pygame.init()
     pygame.mixer.init()
-    sound = pygame.mixer.Sound("Music/Fluffing-A-Duck.mp3")
+    sound = pygame.mixer.Sound("music/Fluffing-A-Duck.mp3")
     sound.set_volume(0.5)  # Now plays at 50% of full volume.
     sound.play()
 
@@ -36,7 +36,7 @@ def snakeonthebeach(print_song_name=True):
 
     pygame.init()
     pygame.mixer.init()
-    sound = pygame.mixer.Sound("Music/sotb.mp3")
+    sound = pygame.mixer.Sound("music/sotb.mp3")
     sound.set_volume(0.2)  # Now plays at 20% of full volume.
     sound.play()
 
@@ -54,7 +54,7 @@ def aparisiancafe(print_song_name=True):
 
     pygame.init()
     pygame.mixer.init()
-    sound = pygame.mixer.Sound("Music/A Parisian Cafe.mp3")
+    sound = pygame.mixer.Sound("music/A Parisian Cafe.mp3")
     sound.play()
 
     if print_song_name:
@@ -71,7 +71,7 @@ def bliss(print_song_name=True):
 
     pygame.init()
     pygame.mixer.init()
-    sound = pygame.mixer.Sound("Music/bliss.mp3")
+    sound = pygame.mixer.Sound("music/bliss.mp3")
     sound.set_volume(0.9)  # Now plays at 90% of full volume.
     sound.play()
 
@@ -89,7 +89,7 @@ def happynjoyfulchildren(print_song_name=True):
 
     pygame.init()
     pygame.mixer.init()
-    sound = pygame.mixer.Sound("Music/happyandjoyfulchildren.mp3")
+    sound = pygame.mixer.Sound("music/happyandjoyfulchildren.mp3")
     sound.set_volume(0.9)  # Now plays at 90% of full volume.
     sound.play()
 
@@ -107,7 +107,7 @@ def tropicalsoul(print_song_name=True):
 
     pygame.init()
     pygame.mixer.init()
-    sound = pygame.mixer.Sound("Music/tropicalsoul.mp3")
+    sound = pygame.mixer.Sound("music/tropicalsoul.mp3")
     sound.set_volume(0.9)  # Now plays at 90% of full volume.
     sound.play()
 
@@ -125,7 +125,7 @@ def newlands(print_song_name=True):
 
     pygame.init()
     pygame.mixer.init()
-    sound = pygame.mixer.Sound("Music/newlands.mp3")
+    sound = pygame.mixer.Sound("music/newlands.mp3")
     sound.set_volume(0.5)  # Now plays at 50% of full volume.
     sound.play()
 
@@ -143,7 +143,7 @@ def beachvibes(print_song_name=True):
 
     pygame.init()
     pygame.mixer.init()
-    sound = pygame.mixer.Sound("Music/beachvibes.mp3")
+    sound = pygame.mixer.Sound("music/beachvibes.mp3")
     sound.set_volume(0.5)  # Now plays at 50% of full volume.
     sound.play()
 
@@ -160,7 +160,7 @@ def tropicalfever(print_song_name=True):
 
     pygame.init()
     pygame.mixer.init()
-    sound = pygame.mixer.Sound("Music/tropicalfever.mp3")
+    sound = pygame.mixer.Sound("music/tropicalfever.mp3")
     sound.set_volume(0.2)  # Now plays at 20% of full volume.
     sound.play()
 
@@ -177,7 +177,7 @@ def happyadricanvillage(print_song_name=True):
 
     pygame.init()
     pygame.mixer.init()
-    sound = pygame.mixer.Sound("Music/happyafricanvillage.mp3")
+    sound = pygame.mixer.Sound("music/happyafricanvillage.mp3")
     sound.set_volume(0.2)  # Now plays at 20% of full volume.
     sound.play()
 
