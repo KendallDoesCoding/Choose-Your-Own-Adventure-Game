@@ -24,7 +24,7 @@ class GUI:
 
         # find a font that can draw emojis
         fonts = pygame.sysfont.get_fonts()
-        if (emojis := [font for font in fonts if "emoji" in font 
+        if (emojis := [font for font in fonts if "emoji" in font
                        and font != "notocoloremoji"]):
             self.font = pygame.font.SysFont(emojis[0], 60)
             self.button_font = pygame.font.SysFont(emojis[0], 40)
@@ -174,8 +174,8 @@ class GUI:
                     self.exit_func()
 
                 # Return when enter pressed
-                if (event.type == pygame.KEYDOWN and 
-                    event.key in [pygame.K_RETURN, pygame.K_KP_ENTER]):
+                if (event.type == pygame.KEYDOWN and
+                        event.key in [pygame.K_RETURN, pygame.K_KP_ENTER]):
                     return
 
             # Render the center text
